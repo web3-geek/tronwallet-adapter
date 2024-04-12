@@ -82,4 +82,4 @@ interface OkxWalletAdapterConfig {
 -   Deeplink only works for OKX App **version 6.1.38 or later** on Android.
 -   **OKX Wallet App on IOS does not support TRON currently**.
 
-For more information about tronwallet adapters, please refer to [`@tronweb3/tronwallet-adapters`](https://github.com/tronprotocol/tronwallet-adapter/tree/main/packages/adapters/adapters)
+For more information about tronwallet adapters, please refer to [`@tronweb3/tronwallet-adapters`](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/adapters)

@@ -20,7 +20,7 @@ npm install @tronweb3/tronwallet-adapter-vue-ui @tronweb3/tronwallet-adapter-vue
 
 > Note: A stylesheet must be imported to make components work fine.
 
-Here is a [Demo project](https://github.com/tronprotocol/tronwallet-adapter/tree/main/demos/vue-ui/vite-app);
+Here is a [Demo project](https://github.com/tronsolution/tronwallet-adapter/tree/main/demos/vue-ui/vite-app);
 
 ```html
 <template>
@@ -133,7 +133,7 @@ Button with multiple functions including:
 -   Copy address
 
 It's recommended to use this component to connect wallet easily.
-![example](https://raw.githubusercontent.com/tronprotocol/tronwallet-adapter/main/docs/action-button.gif)
+![example](./action-button.gif)
 
 ### Props
 

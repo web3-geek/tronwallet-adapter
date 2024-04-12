@@ -8,10 +8,10 @@
         "BitKeep",
         "Bitget"
     ],
-    "author": "tronprotocol",
+    "author": "tronsolution",
     "repository": {
         "type": "git",
-        "url": "https://github.com/tronprotocol/tronwallet-adapter"
+        "url": "https://github.com/tronsolution/tronwallet-adapter"
     },
     "license": "MIT",
     "type": "module",

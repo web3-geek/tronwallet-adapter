@@ -139,7 +139,7 @@ Button with multiple functions including:
 -   Copy address
 
 It's recommended to use this component to connect wallet easily.
-![example](https://raw.githubusercontent.com/tronprotocol/tronwallet-adapter/main/docs/action-button.gif)
+![example](./action-button.gif)
 
 ### Props
 

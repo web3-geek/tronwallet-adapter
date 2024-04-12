@@ -11,9 +11,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/tronprotocol/tronwallet-adapter"
+        "url": "https://github.com/tronsolution/tronwallet-adapter"
     },
-    "author": "tronprotocol",
+    "author": "tronsolution",
     "license": "MIT",
     "scripts": {
         "nuke": "shx rm -rf packages/*/*/node_modules demos/**/node_modules node_modules || true",
