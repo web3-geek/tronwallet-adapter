@@ -25,5 +25,11 @@
     "typescript": "^5.2.2",
     "vite": "^5.2.11",
     "vue-tsc": "^1.8.22"
+  },
+  "overrides": {
+    "@ledgerhq/errors": "6.10.0"
+  },
+  "resolutions": {
+    "@ledgerhq/errors": "6.10.0"
   }
 }
