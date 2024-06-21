@@ -41,14 +41,21 @@
         "@vitejs/plugin-legacy": "^5.4.0",
         "@vitejs/plugin-react": "^4.2.1",
         "dotenv": "^16.3.1",
+        "@types/node": "^18.19.0",
         "typescript": "^4.6.4",
         "vite": "^5.2.11",
         "webpack-cli": "^5.0.2"
     },
     "overrides": {
-        "@ledgerhq/errors": "6.10.0"
+        "@ledgerhq/errors": "6.10.0",
+        "@ledgerhq/devices": "6.27.1",
+        "@ledgerhq/hw-transport": "6.27.1",
+        "@ledgerhq/hw-transport-webhid": "6.27.1"
     },
     "resolutions": {
-        "@ledgerhq/errors": "6.10.0"
+        "@ledgerhq/errors": "6.10.0",
+        "@ledgerhq/devices": "6.27.1",
+        "@ledgerhq/hw-transport": "6.27.1",
+        "@ledgerhq/hw-transport-webhid": "6.27.1"
     }
 }
