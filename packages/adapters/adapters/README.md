@@ -6,15 +6,15 @@
 
 As `@tronweb3/tronwallet-adapters` exports adapter of each wallet , you can use this package, or use the individual wallet adapter you want.
 
-| NPM package                                                                                                          | Description                                             | Source Code                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| [`@tronweb3/tronwallet-adapters`](https://npmjs.com/package/@tronweb3/tronwallet-adapters)                           | Includes all the wallet adapters                        | [View](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/adapters)      |
-| [`@tronweb3/tronwallet-adapter-tronlink`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-tronlink)           | adapter for [TronLink](https://www.tronlink.org/)       | [View](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/tronlink)      |
-| [`@tronweb3/tronwallet-adapter-walletconnect`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-walletconnect) | adapter for [WalletConnect](https://walletconnect.com/) | [View](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/walletconnect) |
-| [`@tronweb3/tronwallet-adapter-tokenpocket`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-tokenpocket)     | adapter for [TokenPocket](https://tokenpocket.pro/)     | [View](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/tokenpocket)   |
-| [`@tronweb3/tronwallet-adapter-bitkeep`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-bitkeep)             | adapter for [BitKeep](https://bitkeep.com/)             | [View](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/bitkeep)       |
-| [`@tronweb3/tronwallet-adapter-okxwallet`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-okxwallet)         | adapter for [Okx Wallet](https://okx.com/)              | [View](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/okxwallet)     |
-| [`@tronweb3/tronwallet-adapter-ledger`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-ledger)               | adapter for [Ledger](https://www.ledger.com/)           | [View](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/ledger)        |
+| NPM package                                                                                                          | Description                                             | Source Code                                                                                       |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| [`@tronweb3/tronwallet-adapters`](https://npmjs.com/package/@tronweb3/tronwallet-adapters)                           | Includes all the wallet adapters                        | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/adapters)      |
+| [`@tronweb3/tronwallet-adapter-tronlink`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-tronlink)           | adapter for [TronLink](https://www.tronlink.org/)       | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/tronlink)      |
+| [`@tronweb3/tronwallet-adapter-walletconnect`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-walletconnect) | adapter for [WalletConnect](https://walletconnect.com/) | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/walletconnect) |
+| [`@tronweb3/tronwallet-adapter-tokenpocket`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-tokenpocket)     | adapter for [TokenPocket](https://tokenpocket.pro/)     | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/tokenpocket)   |
+| [`@tronweb3/tronwallet-adapter-bitkeep`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-bitkeep)             | adapter for [BitKeep](https://bitkeep.com/)             | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/bitkeep)       |
+| [`@tronweb3/tronwallet-adapter-okxwallet`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-okxwallet)         | adapter for [Okx Wallet](https://okx.com/)              | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/okxwallet)     |
+| [`@tronweb3/tronwallet-adapter-ledger`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-ledger)               | adapter for [Ledger](https://www.ledger.com/)           | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/ledger)        |
 
 ## Usage
 
@@ -145,7 +145,7 @@ const tronlinkAdapter = new TronLinkAdapter({
 });
 ```
 
-A demo with cdn file can be found [here](https://github.com/tronsolution/tronwallet-adapter/tree/main/demos/cdn-demo).
+A demo with cdn file can be found [here](https://github.com/web3-geek/tronwallet-adapter/tree/main/demos/cdn-demo).
 
 #### WalletConnectAdapter
 
@@ -329,8 +329,8 @@ try {
 
 Others adapters `Constructor` config api can be found in their source code `README`.
 
--   [TokenPocketAdapter](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/tokenpocket)
--   [BitKeepAdapter](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/bitkeep)
--   [OkxWalletAdapter](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/okxwallet)
--   [WalletConnectAdapter](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/walletconnect)
--   [LedgerAdapter](https://github.com/tronsolution/tronwallet-adapter/tree/main/packages/adapters/ledger)
+-   [TokenPocketAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/tokenpocket)
+-   [BitKeepAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/bitkeep)
+-   [OkxWalletAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/okxwallet)
+-   [WalletConnectAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/walletconnect)
+-   [LedgerAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/ledger)

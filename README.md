@@ -419,7 +419,7 @@ Welcome to contribute your idea!
 
 1. Fork the repo and clone to your device.
     ```bash
-    git clone https://github.com/tronsolution/tronwallet-adapter.git
+    git clone https://github.com/web3-geek/tronwallet-adapter.git
     ```
 2. Install Nodejs@16.x and pnpm@7.x
 3. Install dependencies
