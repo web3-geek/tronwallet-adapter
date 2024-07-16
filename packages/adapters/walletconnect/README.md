@@ -38,7 +38,7 @@ const adapter = new WalletConnectAdapter({
     web3ModalConfig: {
         themeMode: 'dark',
         themeVariables: {
-            '--w3m-z-index': 1000,
+            '--wcm-z-index': 1000,
         },
         /**
          * Recommended Wallets are fetched from WalletConnect explore api:

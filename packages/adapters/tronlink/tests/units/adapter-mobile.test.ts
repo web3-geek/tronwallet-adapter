@@ -24,6 +24,7 @@ beforeEach(() => {
 });
 afterEach(() => {
     globalThis.window.location.href = '';
+    jest.clearAllTimers();
 });
 
 describe('when on mobile device browser', () => {

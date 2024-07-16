@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 web3ModalConfig: {
                     themeMode: 'dark',
                     themeVariables: {
-                        '--w3m-z-index': '1000',
+                        '--wcm-z-index': '1000',
                     },
                 },
             });

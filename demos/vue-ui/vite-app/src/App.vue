@@ -29,7 +29,7 @@ const walletConnect = new WalletConnectAdapter({
     web3ModalConfig: {
         themeMode: 'dark',
         themeVariables: {
-            '--w3m-z-index': '1000',
+            '--wcm-z-index': '1000',
         },
         // explorerRecommendedWalletIds: 'NONE',
         enableExplorer: true,

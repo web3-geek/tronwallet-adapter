@@ -20,15 +20,16 @@ export const WalletConnectWalletName = 'WalletConnect' as AdapterName<'WalletCon
 const NETWORK = Object.keys(ChainNetwork);
 export interface WalletConnectAdapterConfig {
     /**
-     * Network to use, one of Mainnet,Shasta,Nile
+     * Network to use, one of Mainnet,Shasta,Nile or chainId such as 0x2b6653dc
      */
-    network: `${ChainNetwork}`;
+    network: `${ChainNetwork}` | string;
     /**
      * Options to WalletConnect
      */
     options: SignClientTypes.Options;
     /**
-     * QRCodeModalOptions to WalletConnect
+     * WalletConnectModalOptions to WalletConnect
+     * Detailed documentation can be found in WalletConnect page: https://docs.walletconnect.com/advanced/walletconnectmodal/options.
      */
     web3ModalConfig?: WalletConnectWeb3ModalConfig;
 }
@@ -54,9 +55,9 @@ export class WalletConnectAdapter extends Adapter {
         if (!config || typeof config !== 'object') {
             throw new Error(`[WalletconnectAdapter] config is required.`);
         }
-        if (!NETWORK.includes(config.network)) {
+        if (!config.network) {
             console.error(
-                `[WalletconnectAdapter] config.network must be one of ${NETWORK.join()}. Use Nile network instead.`
+                `[WalletconnectAdapter] config.network must be one of ${NETWORK.join()} or a chainID such as 0x2b6653dc. Use Nile network instead.`
             );
             config.network = 'Nile';
         }
@@ -95,7 +96,9 @@ export class WalletConnectAdapter extends Adapter {
             let address: string;
             try {
                 wallet = new WalletConnectWallet({
-                    network: WalletConnectChainID[this._config.network] || WalletConnectChainID.Nile,
+                    network:
+                        WalletConnectChainID[this._config.network as `${ChainNetwork}`] ||
+                        `tron:${this._config.network}`,
                     options: this._config.options,
                     web3ModalConfig: this._config.web3ModalConfig,
                 });
