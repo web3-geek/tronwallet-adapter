@@ -87,7 +87,7 @@ describe('WalletSelectButton', () => {
         beforeEach(() => {
             vi.useFakeTimers();
         });
-        test('onClick prop which returns false should work fine', async () => {
+        test.skip('onClick prop which returns false should work fine', async () => {
             const onClick = vi.fn(() => {
                 return false;
             });

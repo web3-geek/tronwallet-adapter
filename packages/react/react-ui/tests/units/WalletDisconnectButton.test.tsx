@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import type { FC, PropsWithChildren } from 'react';
-import React from 'react';
+import React, { act } from 'react';
 import { render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import 'jest-localstorage-mock';
@@ -10,7 +10,6 @@ import { WalletProvider } from '@tronweb3/tronwallet-adapter-react-hooks';
 import { WalletModalProvider } from '../../src/WalletModalProvider.js';
 import { MockTronLink } from './MockTronLink.js';
 import { WalletDisconnectButton } from '../../src/WalletDisconnectButton.js';
-import { act } from 'react-dom/test-utils';
 
 const Providers: FC<PropsWithChildren> = function (props) {
     return (

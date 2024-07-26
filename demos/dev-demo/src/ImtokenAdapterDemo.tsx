@@ -3,12 +3,12 @@ import { useEffect, useMemo, useState, useCallback } from 'react';
 // import './App.css';
 import type { Adapter } from '@tronweb3/tronwallet-abstract-adapter';
 import { AdapterState } from '@tronweb3/tronwallet-abstract-adapter';
-import { BitKeepAdapter } from '@tronweb3/tronwallet-adapter-bitkeep';
+import { ImTokenAdapter } from '@tronweb3/tronwallet-adapter-imtoken';
 import { Box, Button, Typography, Tooltip, Select, MenuItem, Alert, FormControl, TextField } from '@mui/material';
 import { tronWeb } from './tronweb.js';
 const receiver = 'TMDKznuDWaZwfZHcM61FVFstyYNmK6Njk1';
 
-export function BitgetAdapterDemo() {
+export function ImTokenAdapterDemo() {
     const [connectState, setConnectState] = useState(AdapterState.NotFound);
     const [account, setAccount] = useState('');
     const [readyState, setReadyState] = useState('');
@@ -17,7 +17,7 @@ export function BitgetAdapterDemo() {
     const [open, setOpen] = useState(false);
     const [signMessage, setSignMessage] = useState('Hello, Adapter');
     const [signedMessage, setSignedMessage] = useState('');
-    const adapter = useMemo(() => new BitKeepAdapter({
+    const adapter = useMemo(() => new ImTokenAdapter({
         openUrlWhenWalletNotFound: false,
         checkTimeout: 3000
     }), []);
@@ -113,7 +113,7 @@ export function BitgetAdapterDemo() {
     }
     return (
         <Box sx={{ width: '100%', maxWidth: 900 }}>
-            <h1>Bitget Demo <img src={adapter.icon} alt="adapter" style={{width: 30, height: 30}} /></h1>
+            <h1>imToken Demo <img src={adapter.icon} alt="adapter" style={{width: 30, height: 30}} /></h1>
             <Typography variant="h6" gutterBottom>
                 Your account address:
             </Typography>
@@ -146,15 +146,7 @@ export function BitgetAdapterDemo() {
                     Transfer
                 </Button>
             </Detail>
-            <Detail>
-                <Button variant="contained" onClick={onSignMessage}>
-                    Sign Message
-                </Button>
-                
-                <Button variant="contained" disabled={!signedMessage} onClick={onVerifyMessage}>
-                    Verify Signed Message
-                </Button>
-            </Detail>
+            
             {open && (
                 <Alert onClose={() => setOpen(false)} severity="success" sx={{ width: '100%', marginTop: 1 }}>
                     Success! You can confirm your transfer on{' '}
@@ -163,23 +155,6 @@ export function BitgetAdapterDemo() {
                     </a>
                 </Alert>
             )}
-            {/* <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={selectedChainId}
-                label="Chain"
-                size="small"
-                onChange={(e) => setSelectedChainId(e.target.value)}
-            >
-                <MenuItem value={'0x2b6653dc'}>Mainnet</MenuItem>
-                <MenuItem value={'0x94a9059e'}>Shasta</MenuItem>
-                <MenuItem value={'0xcd8690dc'}>Nile</MenuItem>
-            </Select>
-
-            <Button style={{ margin: '0 20px' }} onClick={onSwitchChain} variant="contained">
-                Switch Chain to {selectedChainId}
-            </Button> */}
-            {/* <MultiSignDemo address={account} adapter={adapter}></MultiSignDemo> */}
         </Box>
     );
 }

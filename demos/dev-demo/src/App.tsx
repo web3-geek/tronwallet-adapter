@@ -6,7 +6,7 @@ import { CustomConnectWithGetAccounts } from './LedgerDemo/CustomConnectWithGetA
 import { TronLinkAdapterDemo } from './TronLinkAdapterDemo.js';
 import { ReactHooksDemo } from './ReactHooksDemo.js';
 import { TokenPocketAdapterDemo } from './TokenPocketAdapterDemo.js';
-import { BitgetAdapterDemo } from './BitgetAdapterDemo.js';
+import { ImTokenAdapterDemo } from './ImtokenAdapterDemo.js';
 import { OkxWalletAdapterDemo } from './OkxWalletAdapterDemo.js';
 import { MetamaskAdapterDemo } from './Metamask.js';
 import { TronLinkEvmAdapter } from '@tronweb3/tronwallet-adapter-tronlink-evm';
@@ -46,7 +46,7 @@ function App() {
                         <Tab label="LedgerAdapter CustomConnectWithGetAccounts" />
                         <Tab label="ReactHooks Demo" />
                         <Tab label="TokenPocketAdapter Demo" />
-                        <Tab label="BitgetAdapter Demo" />
+                        <Tab label="ImTokenAdapter Demo" />
                         <Tab label="OkxWalletAdapter Demo" />
                         <Tab label="MetaMaskWalletAdapter Demo" />
                         <Tab label="TronlinkEvmWalletAdapter Demo" />
@@ -71,7 +71,7 @@ function App() {
                     <TokenPocketAdapterDemo></TokenPocketAdapterDemo>
                 </TabPanel>
                 <TabPanel value={value} index={6}>
-                    <BitgetAdapterDemo></BitgetAdapterDemo>
+                    <ImTokenAdapterDemo></ImTokenAdapterDemo>
                 </TabPanel>
                 <TabPanel value={value} index={7}>
                     <OkxWalletAdapterDemo></OkxWalletAdapterDemo>

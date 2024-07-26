@@ -9,7 +9,6 @@
         // "strict": false,
         "target": "esnext",
         "lib": ["esnext", "dom"],
-        "types": ["vue"],
         "module": "esnext",
         "moduleResolution": "node",
         "resolveJsonModule": true,
@@ -17,7 +16,5 @@
         "strictNullChecks": true,
         "declaration": true,
         "outDir": "./dist"
-        // "skipDefaultLibCheck": true
-        // "skipLibCheck": true
     }
 }
