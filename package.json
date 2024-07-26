@@ -53,6 +53,7 @@
         "@testing-library/react": "^13.4.0",
         "@types/jest": "^27.5.2",
         "@types/node": "^18.11.9",
+        "@types/scheduler": "^0.16.2",
         "@types/testing-library__jest-dom": "^5.14.5",
         "@typescript-eslint/eslint-plugin": "^5.38.0",
         "@typescript-eslint/parser": "^5.38.0",
@@ -118,8 +119,10 @@
             "follow-redirects": ">=1.15.6",
             "webpack-dev-middleware@<=5.3.3": ">=5.3.4",
             "express@<4.19.2": ">=4.19.2",
-            "@solana/web3.js@>=1.87.0 <1.87.7": ">=1.87.7",
-            "ejs@<3.1.10": ">=3.1.10"
+            "@solana/web3.js": "1.91.8",
+            "ejs@<3.1.10": ">=3.1.10",
+            "ws@>=8.0.0 <8.17.1": ">=8.17.1",
+            "ws@>=7.0.0 <7.5.10": ">=7.5.10"
         }
     }
 }

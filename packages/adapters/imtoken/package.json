@@ -1,11 +1,11 @@
 {
-    "name": "@tronweb3/tronwallet-adapters",
-    "version": "1.2.3",
-    "description": "Wallet adapters to help developers interact with Tron wallets using consistent API.",
+    "name": "@tronweb3/tronwallet-adapter-imtoken",
+    "version": "1.0.0",
+    "description": "Wallet adapter for imToken Wallet Android and IOS app.",
     "keywords": [
         "TRON",
         "TronWeb",
-        "adapters"
+        "imToken"
     ],
     "author": "web3-geek",
     "repository": {
@@ -36,26 +36,18 @@
         "access": "public"
     },
     "scripts": {
-        "test:browser": "vitest",
         "clean": "shx mkdir -p lib && shx rm -rf lib",
         "package": "shx echo '{ \"type\": \"commonjs\" }' > lib/cjs/package.json",
+        "test": "jest",
         "build:umd": "node ../../../scripts/build-umd.js"
     },
     "dependencies": {
-        "@tronweb3/tronwallet-adapter-bitkeep": "workspace:^",
-        "@tronweb3/tronwallet-adapter-imtoken": "workspace:^",
-        "@tronweb3/tronwallet-adapter-ledger": "workspace:^",
-        "@tronweb3/tronwallet-adapter-okxwallet": "workspace:^",
-        "@tronweb3/tronwallet-adapter-tokenpocket": "workspace:^",
-        "@tronweb3/tronwallet-adapter-tronlink": "workspace:^",
-        "@tronweb3/tronwallet-adapter-walletconnect": "workspace:^"
+        "@tronweb3/tronwallet-abstract-adapter": "workspace:^",
+        "@tronweb3/tronwallet-adapter-tronlink": "workspace:^"
     },
     "devDependencies": {
-        "@vitest/browser": "^2.0.4",
-        "@walletconnect/modal": "^2.6.2",
-        "@walletconnect/sign-client": "^2.1.4",
-        "playwright": "^1.45.3",
-        "shx": "^0.3.4",
-        "vitest": "^2.0.4"
+        "@testing-library/dom": "^8.20.0",
+        "jest-environment-jsdom": "^29.3.1",
+        "shx": "^0.3.4"
     }
 }

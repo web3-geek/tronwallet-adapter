@@ -5,7 +5,9 @@
     "compilerOptions": {
         "outDir": "./lib/esm",
         "declarationDir": "./lib/types",
+        "lib": ["esnext", "dom"],
         "jsx": "preserve",
+        "isolatedModules": false,
         "emitDeclarationOnly": true,
         // "noEmit": true,
         "jsxImportSource": "vue"

@@ -1,6 +1,5 @@
-import React, { createRef, forwardRef, useImperativeHandle } from 'react';
+import React, { createRef, forwardRef, useImperativeHandle, act } from 'react';
 import { createRoot } from 'react-dom/client';
-import { act } from 'react-dom/test-utils';
 import type { WalletContextState } from '../../src/useWallet.js';
 import { useWallet } from '../../src/useWallet.js';
 import type { WalletProviderProps } from '../../src/WalletProvider.js';
@@ -21,7 +20,7 @@ type TestRefType = {
     getState(): WalletContextState;
 };
 
-const TestComponent = forwardRef(function TestComponent(_props, ref) {
+const TestComponent = forwardRef<TestRefType>(function TestComponent(_props, ref) {
     const wallet = useWallet();
     useImperativeHandle(
         ref,
@@ -32,13 +31,13 @@ const TestComponent = forwardRef(function TestComponent(_props, ref) {
         }),
         [wallet]
     );
-    return null;
+    return <></>;
 });
 window.open = jest.fn();
 window.console.error = jest.fn();
 describe('useWallet', function () {
     let root: ReturnType<typeof createRoot>;
-    let ref: React.RefObject<TestRefType>;
+    let ref: ReturnType<typeof createRef<TestRefType>>;
     let container: HTMLDivElement;
     let adapter1: FakeAdapter;
     let adapter2: FakeAdapter;
@@ -49,7 +48,7 @@ describe('useWallet', function () {
         act(() => {
             root.render(
                 <WalletProvider {...props} adapters={adapters}>
-                    <TestComponent ref={ref} />
+                    <TestComponent ref={ref as any} />
                 </WalletProvider>
             );
         });

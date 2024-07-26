@@ -15,10 +15,7 @@ This repository contains wallet adapters and components for Tron DApps. With out
 -   [TokenPocket App](https://www.tokenpocket.pro/): All versions
 -   [Ledger](https://www.ledger.com/): All versions
 -   [WalletConnect](https://walletconnect.org): `v2.0`
-
-### Coming Soon
-
--   [imToken](https://token.im/)
+-   [imToken App](https://token.im/): All versions
 
 ## Introduction
 
@@ -164,6 +161,7 @@ tronwallet-adapter
 |   |   ├─tokenpocket # adapter for TokenPocket
 |   |   ├─bitkeep # adapter for Bitget Wallet
 |   |   ├─okxwallet # adapter for Okx Wallet
+|   |   ├─imtoken # adapter for imToken Wallet
 |   ├─react
 |   |   ├─react-hooks # react hooks to manage wallet state
 |   |   ├─react-ui # react ui components to select/connect wallets
@@ -195,6 +193,7 @@ You can use the `@tronweb3/tronwallet-adapters` package, or add the individual w
 | [tokenpocket](https://tokenpocket.pro/)     | Adapter for TokenPocket App(IOS and Android)                     | [`@tronweb3/tronwallet-adapter-tokenpocket`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-tokenpocket)     |
 | [bitkeep](https://bitkeep.com/)             | Adapter for BitKeep extension and BitKeep App(IOS and Android)   | [`@tronweb3/tronwallet-adapter-bitkeep`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-bitkeep)             |
 | [okxwallet](https://www.okx.com/)           | Adapter for Okx Wallet extension and App(Android)                | [`@tronweb3/tronwallet-adapter-okxwallet`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-okxwallet)         |
+| [imtoken](https://token.im/)                | Adapter for imToken Wallet App(IOS and Android)                  | [`@tronweb3/tronwallet-adapter-imtoken`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-imtoken)             |
 
 ### React Components
 
@@ -217,6 +216,7 @@ This package contains all wallet adapters for Tron including:
 -   [TokenPocket](https://tokenpocket.pro/).
 -   [BitKeep](https://bitkeep.com).
 -   [Okx Wallet](https://okx.com).
+-   [imToken Wallet](https://token.im/).
 
 Code example：
 
