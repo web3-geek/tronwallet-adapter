@@ -5,7 +5,6 @@ import { WalletModalProvider } from '@tronweb3/tronwallet-adapter-react-ui';
 import { LedgerAdapter, TronLinkAdapter, WalletConnectAdapter } from '@tronweb3/tronwallet-adapters';
 import { useCallback, useMemo, useState } from 'react';
 import { Detail } from './TronLinkAdapterDemo.js';
-import { tronWeb } from './tronweb.js';
 function ReactHooksDemoWrap({ children }: any) {
     const adapters = useMemo(() => {
         return [
@@ -31,7 +30,7 @@ function ReactHooksDemoWrap({ children }: any) {
         console.log('xxxx onConnect: ', address)
     }
     function onAccountsChanged(cur: string, pre?: string) {
-        console.log('xxxx onAccountsChanged, 当前地址: ', cur, ' 上一次使用的地址：', pre);
+        console.log('xxxx onAccountsChanged, cur: ', cur, ' pre:', pre);
     }
     function onAdapterChanged(adapter: Adapter | null) {
         console.log('xxxx onAdapterChanged: ', adapter?.name);
@@ -68,10 +67,10 @@ function _ReactHooksDemo() {
 
     const onVerifyMessage = useCallback(
         async function () {
-            const newAddress = await tronWeb.trx.verifyMessageV2(signMessage, signedMessage);
+            const newAddress = await (window as any).tronWeb.trx.verifyMessageV2(messageToSign, signedMessage);
             alert(address === newAddress ? 'success verify' : 'failed verify');
         },
-        [signMessage, signedMessage, address]
+        [messageToSign, signedMessage, address]
     );
 
     const onSelect = useCallback(
