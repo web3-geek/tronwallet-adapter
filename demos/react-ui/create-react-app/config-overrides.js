@@ -13,7 +13,8 @@ module.exports = function override(config, env) {
     'zlib': require.resolve('browserify-zlib'),
     'path': require.resolve('path-browserify'),
     'stream': require.resolve('stream-browserify'),
-    'crypto': require.resolve('crypto-browserify')
+    'crypto': require.resolve('crypto-browserify'),
+    'vm': require.resolve('vm-browserify'),
   };
 
   config.plugins.push(
