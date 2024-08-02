@@ -395,13 +395,13 @@ importers:
     dependencies:
       '@emotion/react':
         specifier: ^11.10.4
-        version: 11.13.0(@types/react@18.0.26)(react@18.3.1)
+        version: 11.13.0(@types/react@18.3.3)(react@18.2.0)
       '@emotion/styled':
         specifier: ^11.10.4
-        version: 11.13.0(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1)
+        version: 11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0)
       '@mui/material':
         specifier: ^5.10.10
-        version: 5.16.4(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 5.16.4(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@tronweb3/tronwallet-abstract-adapter':
         specifier: ^1.1.0
         version: 1.1.6
@@ -413,19 +413,19 @@ importers:
         version: 1.1.8
       '@tronweb3/tronwallet-adapter-react-hooks':
         specifier: ^1.0.0
-        version: 1.1.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 1.1.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@tronweb3/tronwallet-adapter-react-ui':
         specifier: ^1.1.0
-        version: 1.1.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 1.1.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@tronweb3/tronwallet-adapter-tokenpocket':
         specifier: ^1.0.0
         version: 1.0.3
       '@tronweb3/tronwallet-adapter-walletconnect':
         specifier: ^2.0.0
-        version: 2.0.0(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(typescript@4.9.3)(utf-8-validate@6.0.3)
+        version: 2.0.0(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(typescript@4.9.3)(utf-8-validate@6.0.3)
       '@tronweb3/tronwallet-adapters':
         specifier: ^1.2.2
-        version: 1.2.2(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(typescript@4.9.3)(utf-8-validate@6.0.3)
+        version: 1.2.2(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(typescript@4.9.3)(utf-8-validate@6.0.3)
       '@types/node':
         specifier: 18.11.9
         version: 18.11.9
@@ -437,16 +437,16 @@ importers:
         version: 13.0.5(eslint@8.57.0)(typescript@4.9.3)
       next:
         specifier: ^14.2.3
-        version: 14.2.5(@babel/core@7.24.9)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 14.2.5(@babel/core@7.24.9)(babel-plugin-macros@3.1.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react:
-        specifier: ^18.2.0
-        version: 18.3.1
+        specifier: 18.2.0
+        version: 18.2.0
       react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
       react-hot-toast:
         specifier: ^2.4.0
-        version: 2.4.1(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.4.1(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       tronweb:
         specifier: ^4.4.0
         version: 4.4.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
@@ -458,11 +458,11 @@ importers:
         version: 4.9.3
     devDependencies:
       '@types/react':
-        specifier: 18.0.26
-        version: 18.0.26
+        specifier: 18.3.3
+        version: 18.3.3
       '@types/react-dom':
-        specifier: ^18.0.6
-        version: 18.3.0
+        specifier: 18.0.6
+        version: 18.0.6
       lokijs:
         specifier: ^1.5.12
         version: 1.5.12
@@ -3703,14 +3703,14 @@ packages:
   '@types/range-parser@1.2.7':
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
 
+  '@types/react-dom@18.0.6':
+    resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
+
   '@types/react-dom@18.3.0':
     resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
 
   '@types/react-transition-group@4.4.10':
     resolution: {integrity: sha512-hT/+s0VQs2ojCX823m60m5f0sL5idt9SO6Tj6Dg+rdphGPIeJbJ6CxvBYkgkGKrYeDjvIpKTR38UzmtHJOGW3Q==}
-
-  '@types/react@18.0.26':
-    resolution: {integrity: sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==}
 
   '@types/react@18.3.3':
     resolution: {integrity: sha512-hti/R0pS0q1/xx+TsI73XIqk26eBsISZ2R0wUijXIngRK9R/e7Xw/cXVxQK7R5JjW+SV4zGcn5hXjudkN/pLIw==}
@@ -3726,9 +3726,6 @@ packages:
 
   '@types/scheduler@0.16.8':
     resolution: {integrity: sha512-WZLiwShhwLRmeV6zH+GkbOFT6Z6VklCItrDioxUnv+u4Ll+8vKeFySoFyK/0ctcRpOmwAicELfmys1sDc/Rw+A==}
-
-  '@types/scheduler@0.23.0':
-    resolution: {integrity: sha512-YIoDCTH3Af6XM5VuwGG/QL/CJqga1Zm3NkU3HZ4ZHK2fRMPYP1VczsTUqtsf43PH/iJNVlPHAo2oWX7BSdB2Hw==}
 
   '@types/seedrandom@3.0.1':
     resolution: {integrity: sha512-giB9gzDeiCeloIXDgzFBCgjj1k4WxcDrZtGl6h1IqmUPlxF+Nx8Ve+96QCyDZ/HseB/uvDsKbpib9hU5cU53pw==}
@@ -9206,6 +9203,11 @@ packages:
       typescript:
         optional: true
 
+  react-dom@18.2.0:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+    peerDependencies:
+      react: ^18.2.0
+
   react-dom@18.3.1:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
@@ -9255,6 +9257,10 @@ packages:
     peerDependencies:
       react: '>=16.6.0'
       react-dom: '>=16.6.0'
+
+  react@18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+    engines: {node: '>=0.10.0'}
 
   react@18.3.1:
     resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
@@ -12574,19 +12580,19 @@ snapshots:
 
   '@emotion/memoize@0.9.0': {}
 
-  '@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1)':
+  '@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.24.8
       '@emotion/babel-plugin': 11.12.0
       '@emotion/cache': 11.13.0
       '@emotion/serialize': 1.3.0
-      '@emotion/use-insertion-effect-with-fallbacks': 1.1.0(react@18.3.1)
+      '@emotion/use-insertion-effect-with-fallbacks': 1.1.0(react@18.2.0)
       '@emotion/utils': 1.4.0
       '@emotion/weak-memoize': 0.4.0
       hoist-non-react-statics: 3.3.2
-      react: 18.3.1
+      react: 18.2.0
     optionalDependencies:
-      '@types/react': 18.0.26
+      '@types/react': 18.3.3
     transitivePeerDependencies:
       - supports-color
 
@@ -12616,18 +12622,18 @@ snapshots:
 
   '@emotion/sheet@1.4.0': {}
 
-  '@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1)':
+  '@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.24.8
       '@emotion/babel-plugin': 11.12.0
       '@emotion/is-prop-valid': 1.3.0
-      '@emotion/react': 11.13.0(@types/react@18.0.26)(react@18.3.1)
+      '@emotion/react': 11.13.0(@types/react@18.3.3)(react@18.2.0)
       '@emotion/serialize': 1.3.0
-      '@emotion/use-insertion-effect-with-fallbacks': 1.1.0(react@18.3.1)
+      '@emotion/use-insertion-effect-with-fallbacks': 1.1.0(react@18.2.0)
       '@emotion/utils': 1.4.0
-      react: 18.3.1
+      react: 18.2.0
     optionalDependencies:
-      '@types/react': 18.0.26
+      '@types/react': 18.3.3
     transitivePeerDependencies:
       - supports-color
 
@@ -12647,6 +12653,10 @@ snapshots:
       - supports-color
 
   '@emotion/unitless@0.9.0': {}
+
+  '@emotion/use-insertion-effect-with-fallbacks@1.1.0(react@18.2.0)':
+    dependencies:
+      react: 18.2.0
 
   '@emotion/use-insertion-effect-with-fallbacks@1.1.0(react@18.3.1)':
     dependencies:
@@ -13925,26 +13935,26 @@ snapshots:
 
   '@mui/core-downloads-tracker@5.16.4': {}
 
-  '@mui/material@5.16.4(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@mui/material@5.16.4(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.24.8
       '@mui/core-downloads-tracker': 5.16.4
-      '@mui/system': 5.16.4(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1)
-      '@mui/types': 7.2.15(@types/react@18.0.26)
-      '@mui/utils': 5.16.4(@types/react@18.0.26)(react@18.3.1)
+      '@mui/system': 5.16.4(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0)
+      '@mui/types': 7.2.15(@types/react@18.3.3)
+      '@mui/utils': 5.16.4(@types/react@18.3.3)(react@18.2.0)
       '@popperjs/core': 2.11.8
       '@types/react-transition-group': 4.4.10
       clsx: 2.1.1
       csstype: 3.1.3
       prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
       react-is: 18.3.1
-      react-transition-group: 4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-transition-group: 4.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     optionalDependencies:
-      '@emotion/react': 11.13.0(@types/react@18.0.26)(react@18.3.1)
-      '@emotion/styled': 11.13.0(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1)
-      '@types/react': 18.0.26
+      '@emotion/react': 11.13.0(@types/react@18.3.3)(react@18.2.0)
+      '@emotion/styled': 11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0)
+      '@types/react': 18.3.3
 
   '@mui/material@5.16.4(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -13967,14 +13977,14 @@ snapshots:
       '@emotion/styled': 11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
       '@types/react': 18.3.3
 
-  '@mui/private-theming@5.16.4(@types/react@18.0.26)(react@18.3.1)':
+  '@mui/private-theming@5.16.4(@types/react@18.3.3)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.24.8
-      '@mui/utils': 5.16.4(@types/react@18.0.26)(react@18.3.1)
+      '@mui/utils': 5.16.4(@types/react@18.3.3)(react@18.2.0)
       prop-types: 15.8.1
-      react: 18.3.1
+      react: 18.2.0
     optionalDependencies:
-      '@types/react': 18.0.26
+      '@types/react': 18.3.3
 
   '@mui/private-theming@5.16.4(@types/react@18.3.3)(react@18.3.1)':
     dependencies:
@@ -13985,16 +13995,16 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.3
 
-  '@mui/styled-engine@5.16.4(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1))(react@18.3.1)':
+  '@mui/styled-engine@5.16.4(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.24.8
       '@emotion/cache': 11.13.0
       csstype: 3.1.3
       prop-types: 15.8.1
-      react: 18.3.1
+      react: 18.2.0
     optionalDependencies:
-      '@emotion/react': 11.13.0(@types/react@18.0.26)(react@18.3.1)
-      '@emotion/styled': 11.13.0(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1)
+      '@emotion/react': 11.13.0(@types/react@18.3.3)(react@18.2.0)
+      '@emotion/styled': 11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0)
 
   '@mui/styled-engine@5.16.4(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -14007,21 +14017,21 @@ snapshots:
       '@emotion/react': 11.13.0(@types/react@18.3.3)(react@18.3.1)
       '@emotion/styled': 11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
 
-  '@mui/system@5.16.4(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1)':
+  '@mui/system@5.16.4(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.24.8
-      '@mui/private-theming': 5.16.4(@types/react@18.0.26)(react@18.3.1)
-      '@mui/styled-engine': 5.16.4(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1))(react@18.3.1)
-      '@mui/types': 7.2.15(@types/react@18.0.26)
-      '@mui/utils': 5.16.4(@types/react@18.0.26)(react@18.3.1)
+      '@mui/private-theming': 5.16.4(@types/react@18.3.3)(react@18.2.0)
+      '@mui/styled-engine': 5.16.4(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0))(react@18.2.0)
+      '@mui/types': 7.2.15(@types/react@18.3.3)
+      '@mui/utils': 5.16.4(@types/react@18.3.3)(react@18.2.0)
       clsx: 2.1.1
       csstype: 3.1.3
       prop-types: 15.8.1
-      react: 18.3.1
+      react: 18.2.0
     optionalDependencies:
-      '@emotion/react': 11.13.0(@types/react@18.0.26)(react@18.3.1)
-      '@emotion/styled': 11.13.0(@emotion/react@11.13.0(@types/react@18.0.26)(react@18.3.1))(@types/react@18.0.26)(react@18.3.1)
-      '@types/react': 18.0.26
+      '@emotion/react': 11.13.0(@types/react@18.3.3)(react@18.2.0)
+      '@emotion/styled': 11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.2.0))(@types/react@18.3.3)(react@18.2.0)
+      '@types/react': 18.3.3
 
   '@mui/system@5.16.4(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)':
     dependencies:
@@ -14039,24 +14049,20 @@ snapshots:
       '@emotion/styled': 11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
       '@types/react': 18.3.3
 
-  '@mui/types@7.2.15(@types/react@18.0.26)':
-    optionalDependencies:
-      '@types/react': 18.0.26
-
   '@mui/types@7.2.15(@types/react@18.3.3)':
     optionalDependencies:
       '@types/react': 18.3.3
 
-  '@mui/utils@5.16.4(@types/react@18.0.26)(react@18.3.1)':
+  '@mui/utils@5.16.4(@types/react@18.3.3)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.24.8
       '@types/prop-types': 15.7.12
       clsx: 2.1.1
       prop-types: 15.8.1
-      react: 18.3.1
+      react: 18.2.0
       react-is: 18.3.1
     optionalDependencies:
-      '@types/react': 18.0.26
+      '@types/react': 18.3.3
 
   '@mui/utils@5.16.4(@types/react@18.3.3)(react@18.3.1)':
     dependencies:
@@ -14891,12 +14897,26 @@ snapshots:
       '@tronweb3/tronwallet-abstract-adapter': 1.1.6
       '@tronweb3/tronwallet-adapter-tronlink': 1.1.9
 
+  '@tronweb3/tronwallet-adapter-react-hooks@1.1.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@tronweb3/tronwallet-abstract-adapter': 1.1.6
+      '@tronweb3/tronwallet-adapter-tronlink': 1.1.9
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+
   '@tronweb3/tronwallet-adapter-react-hooks@1.1.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@tronweb3/tronwallet-abstract-adapter': 1.1.6
       '@tronweb3/tronwallet-adapter-tronlink': 1.1.9
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
+
+  '@tronweb3/tronwallet-adapter-react-ui@1.1.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@tronweb3/tronwallet-abstract-adapter': 1.1.6
+      '@tronweb3/tronwallet-adapter-react-hooks': 1.1.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   '@tronweb3/tronwallet-adapter-react-ui@1.1.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -14983,11 +15003,11 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@tronweb3/tronwallet-adapter-walletconnect@2.0.0(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(typescript@4.9.3)(utf-8-validate@6.0.3)':
+  '@tronweb3/tronwallet-adapter-walletconnect@2.0.0(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(typescript@4.9.3)(utf-8-validate@6.0.3)':
     dependencies:
       '@tronweb3/tronwallet-abstract-adapter': 1.1.6
-      '@tronweb3/walletconnect-tron': 3.0.0(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)
-      '@wagmi/core': 1.4.13(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(typescript@4.9.3)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3))
+      '@tronweb3/walletconnect-tron': 3.0.0(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@6.0.3)
+      '@wagmi/core': 1.4.13(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(typescript@4.9.3)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3))
       '@walletconnect/sign-client': 2.14.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       '@walletconnect/types': 2.14.0
       viem: 0.3.50(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3)
@@ -15115,14 +15135,14 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@tronweb3/tronwallet-adapters@1.2.2(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(typescript@4.9.3)(utf-8-validate@6.0.3)':
+  '@tronweb3/tronwallet-adapters@1.2.2(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(typescript@4.9.3)(utf-8-validate@6.0.3)':
     dependencies:
       '@tronweb3/tronwallet-adapter-bitkeep': 1.1.1(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       '@tronweb3/tronwallet-adapter-ledger': 1.1.8
       '@tronweb3/tronwallet-adapter-okxwallet': 1.0.3
       '@tronweb3/tronwallet-adapter-tokenpocket': 1.0.3
       '@tronweb3/tronwallet-adapter-tronlink': 1.1.9
-      '@tronweb3/tronwallet-adapter-walletconnect': 2.0.0(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(typescript@4.9.3)(utf-8-validate@6.0.3)
+      '@tronweb3/tronwallet-adapter-walletconnect': 2.0.0(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(typescript@4.9.3)(utf-8-validate@6.0.3)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -15272,9 +15292,9 @@ snapshots:
       - uWebSockets.js
       - utf-8-validate
 
-  '@tronweb3/walletconnect-tron@3.0.0(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)':
+  '@tronweb3/walletconnect-tron@3.0.0(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@6.0.3)':
     dependencies:
-      '@walletconnect/modal': 2.6.2(@types/react@18.0.26)(react@18.3.1)
+      '@walletconnect/modal': 2.6.2(@types/react@18.3.3)(react@18.2.0)
       '@walletconnect/sign-client': 2.14.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       '@walletconnect/utils': 2.14.0
     transitivePeerDependencies:
@@ -15550,6 +15570,10 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
+  '@types/react-dom@18.0.6':
+    dependencies:
+      '@types/react': 18.3.3
+
   '@types/react-dom@18.3.0':
     dependencies:
       '@types/react': 18.3.3
@@ -15557,12 +15581,6 @@ snapshots:
   '@types/react-transition-group@4.4.10':
     dependencies:
       '@types/react': 18.3.3
-
-  '@types/react@18.0.26':
-    dependencies:
-      '@types/prop-types': 15.7.12
-      '@types/scheduler': 0.23.0
-      csstype: 3.1.3
 
   '@types/react@18.3.3':
     dependencies:
@@ -15578,8 +15596,6 @@ snapshots:
   '@types/retry@0.12.0': {}
 
   '@types/scheduler@0.16.8': {}
-
-  '@types/scheduler@0.23.0': {}
 
   '@types/seedrandom@3.0.1': {}
 
@@ -16117,14 +16133,14 @@ snapshots:
     optionalDependencies:
       typescript: 5.5.4
 
-  '@wagmi/connectors@3.1.11(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(typescript@4.9.3)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3))':
+  '@wagmi/connectors@3.1.11(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(typescript@4.9.3)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3))':
     dependencies:
       '@coinbase/wallet-sdk': 3.9.3
       '@safe-global/safe-apps-provider': 0.18.3(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3)
       '@safe-global/safe-apps-sdk': 8.1.0(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3)
-      '@walletconnect/ethereum-provider': 2.11.0(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)
+      '@walletconnect/ethereum-provider': 2.11.0(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@6.0.3)
       '@walletconnect/legacy-provider': 2.0.0
-      '@walletconnect/modal': 2.6.2(@types/react@18.0.26)(react@18.3.1)
+      '@walletconnect/modal': 2.6.2(@types/react@18.3.3)(react@18.2.0)
       '@walletconnect/utils': 2.11.0
       abitype: 0.8.7(typescript@4.9.3)
       eventemitter3: 4.0.7
@@ -16265,15 +16281,15 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@wagmi/core@1.4.13(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(typescript@4.9.3)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3))':
+  '@wagmi/core@1.4.13(@types/react@18.3.3)(bufferutil@4.0.8)(immer@9.0.21)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))':
     dependencies:
-      '@wagmi/connectors': 3.1.11(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(typescript@4.9.3)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3))
-      abitype: 0.8.7(typescript@4.9.3)
+      '@wagmi/connectors': 3.1.11(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
+      abitype: 0.8.7(typescript@5.5.4)
       eventemitter3: 4.0.7
-      viem: 0.3.50(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3)
-      zustand: 4.5.4(@types/react@18.0.26)(react@18.3.1)
+      viem: 0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3)
+      zustand: 4.5.4(@types/react@18.3.3)(immer@9.0.21)(react@18.3.1)
     optionalDependencies:
-      typescript: 4.9.3
+      typescript: 5.5.4
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -16298,15 +16314,15 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@wagmi/core@1.4.13(@types/react@18.3.3)(bufferutil@4.0.8)(immer@9.0.21)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))':
+  '@wagmi/core@1.4.13(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(typescript@4.9.3)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3))':
     dependencies:
-      '@wagmi/connectors': 3.1.11(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
-      abitype: 0.8.7(typescript@5.5.4)
+      '@wagmi/connectors': 3.1.11(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(typescript@4.9.3)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3))
+      abitype: 0.8.7(typescript@4.9.3)
       eventemitter3: 4.0.7
-      viem: 0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3)
-      zustand: 4.5.4(@types/react@18.3.3)(immer@9.0.21)(react@18.3.1)
+      viem: 0.3.50(bufferutil@4.0.8)(typescript@4.9.3)(utf-8-validate@6.0.3)
+      zustand: 4.5.4(@types/react@18.3.3)(react@18.2.0)
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 4.9.3
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -16525,13 +16541,13 @@ snapshots:
     dependencies:
       tslib: 1.14.1
 
-  '@walletconnect/ethereum-provider@2.11.0(@types/react@18.0.26)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)':
+  '@walletconnect/ethereum-provider@2.11.0(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@6.0.3)':
     dependencies:
       '@walletconnect/jsonrpc-http-connection': 1.0.8
       '@walletconnect/jsonrpc-provider': 1.0.14
       '@walletconnect/jsonrpc-types': 1.0.4
       '@walletconnect/jsonrpc-utils': 1.0.8
-      '@walletconnect/modal': 2.6.2(@types/react@18.0.26)(react@18.3.1)
+      '@walletconnect/modal': 2.6.2(@types/react@18.3.3)(react@18.2.0)
       '@walletconnect/sign-client': 2.11.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       '@walletconnect/types': 2.11.0
       '@walletconnect/universal-provider': 2.11.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
@@ -16760,9 +16776,9 @@ snapshots:
       '@walletconnect/safe-json': 1.0.2
       pino: 7.11.0
 
-  '@walletconnect/modal-core@2.6.2(@types/react@18.0.26)(react@18.3.1)':
+  '@walletconnect/modal-core@2.6.2(@types/react@18.3.3)(react@18.2.0)':
     dependencies:
-      valtio: 1.11.2(@types/react@18.0.26)(react@18.3.1)
+      valtio: 1.11.2(@types/react@18.3.3)(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
       - react
@@ -16776,14 +16792,14 @@ snapshots:
 
   '@walletconnect/modal-core@2.6.2(react@18.3.1)':
     dependencies:
-      valtio: 1.11.2(@types/react@18.0.26)(react@18.3.1)
+      valtio: 1.11.2(@types/react@18.3.3)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - react
 
-  '@walletconnect/modal-ui@2.6.2(@types/react@18.0.26)(react@18.3.1)':
+  '@walletconnect/modal-ui@2.6.2(@types/react@18.3.3)(react@18.2.0)':
     dependencies:
-      '@walletconnect/modal-core': 2.6.2(@types/react@18.0.26)(react@18.3.1)
+      '@walletconnect/modal-core': 2.6.2(@types/react@18.3.3)(react@18.2.0)
       lit: 2.8.0
       motion: 10.16.2
       qrcode: 1.5.3
@@ -16811,10 +16827,10 @@ snapshots:
       - '@types/react'
       - react
 
-  '@walletconnect/modal@2.6.2(@types/react@18.0.26)(react@18.3.1)':
+  '@walletconnect/modal@2.6.2(@types/react@18.3.3)(react@18.2.0)':
     dependencies:
-      '@walletconnect/modal-core': 2.6.2(@types/react@18.0.26)(react@18.3.1)
-      '@walletconnect/modal-ui': 2.6.2(@types/react@18.0.26)(react@18.3.1)
+      '@walletconnect/modal-core': 2.6.2(@types/react@18.3.3)(react@18.2.0)
+      '@walletconnect/modal-ui': 2.6.2(@types/react@18.3.3)(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
       - react
@@ -22698,7 +22714,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next@14.2.5(@babel/core@7.24.9)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next@14.2.5(@babel/core@7.24.9)(babel-plugin-macros@3.1.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@next/env': 14.2.5
       '@swc/helpers': 0.5.5
@@ -22706,9 +22722,9 @@ snapshots:
       caniuse-lite: 1.0.30001643
       graceful-fs: 4.2.11
       postcss: 8.4.40
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      styled-jsx: 5.1.1(@babel/core@7.24.9)(babel-plugin-macros@3.1.0)(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      styled-jsx: 5.1.1(@babel/core@7.24.9)(babel-plugin-macros@3.1.0)(react@18.2.0)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.5
       '@next/swc-darwin-x64': 14.2.5
@@ -23753,6 +23769,12 @@ snapshots:
       - supports-color
       - vue-template-compiler
 
+  react-dom@18.2.0(react@18.2.0):
+    dependencies:
+      loose-envify: 1.4.0
+      react: 18.2.0
+      scheduler: 0.23.2
+
   react-dom@18.3.1(react@18.3.1):
     dependencies:
       loose-envify: 1.4.0
@@ -23760,6 +23782,14 @@ snapshots:
       scheduler: 0.23.2
 
   react-error-overlay@6.0.11: {}
+
+  react-hot-toast@2.4.1(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      goober: 2.1.14(csstype@3.1.3)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - csstype
 
   react-hot-toast@2.4.1(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
@@ -23866,6 +23896,15 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
+  react-transition-group@4.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      '@babel/runtime': 7.24.8
+      dom-helpers: 5.2.1
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+
   react-transition-group@4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.24.8
@@ -23874,6 +23913,10 @@ snapshots:
       prop-types: 15.8.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
+
+  react@18.2.0:
+    dependencies:
+      loose-envify: 1.4.0
 
   react@18.3.1:
     dependencies:
@@ -24648,10 +24691,10 @@ snapshots:
     dependencies:
       webpack: 5.78.0
 
-  styled-jsx@5.1.1(@babel/core@7.24.9)(babel-plugin-macros@3.1.0)(react@18.3.1):
+  styled-jsx@5.1.1(@babel/core@7.24.9)(babel-plugin-macros@3.1.0)(react@18.2.0):
     dependencies:
       client-only: 0.0.1
-      react: 18.3.1
+      react: 18.2.0
     optionalDependencies:
       '@babel/core': 7.24.9
       babel-plugin-macros: 3.1.0
@@ -25262,6 +25305,10 @@ snapshots:
       querystringify: 2.2.0
       requires-port: 1.0.0
 
+  use-sync-external-store@1.2.0(react@18.2.0):
+    dependencies:
+      react: 18.2.0
+
   use-sync-external-store@1.2.0(react@18.3.1):
     dependencies:
       react: 18.3.1
@@ -25334,13 +25381,13 @@ snapshots:
     optionalDependencies:
       react: 18.3.1
 
-  valtio@1.11.2(@types/react@18.0.26)(react@18.3.1):
+  valtio@1.11.2(@types/react@18.3.3)(react@18.2.0):
     dependencies:
       proxy-compare: 2.5.1
-      use-sync-external-store: 1.2.0(react@18.3.1)
+      use-sync-external-store: 1.2.0(react@18.2.0)
     optionalDependencies:
-      '@types/react': 18.0.26
-      react: 18.3.1
+      '@types/react': 18.3.3
+      react: 18.2.0
 
   valtio@1.11.2(@types/react@18.3.3)(react@18.3.1):
     dependencies:
@@ -26168,13 +26215,6 @@ snapshots:
 
   yoctocolors-cjs@2.1.2: {}
 
-  zustand@4.5.4(@types/react@18.0.26)(react@18.3.1):
-    dependencies:
-      use-sync-external-store: 1.2.0(react@18.3.1)
-    optionalDependencies:
-      '@types/react': 18.0.26
-      react: 18.3.1
-
   zustand@4.5.4(@types/react@18.3.3)(immer@9.0.21)(react@18.3.1):
     dependencies:
       use-sync-external-store: 1.2.0(react@18.3.1)
@@ -26182,3 +26222,10 @@ snapshots:
       '@types/react': 18.3.3
       immer: 9.0.21
       react: 18.3.1
+
+  zustand@4.5.4(@types/react@18.3.3)(react@18.2.0):
+    dependencies:
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    optionalDependencies:
+      '@types/react': 18.3.3
+      react: 18.2.0
