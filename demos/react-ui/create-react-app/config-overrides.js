@@ -33,7 +33,10 @@ module.exports = function override(config, env) {
       fullySpecified: false // disable the behaviour
     }
   });
-
+  config.module.rules.push({
+    test: /\.cjs$/,
+    type: 'javascript/auto'
+  });
   // // react-dnd
   // config.resolve.alias = {
   //   ...config.resolve.alias,
