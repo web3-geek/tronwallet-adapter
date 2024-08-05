@@ -1,6 +1,6 @@
 # `@tronweb3/tronwallet-adapter-imtoken`
 
-This package provides an adapter to enable TRON DApps to connect to the [imToken Wallet extension and App](https://token.im/).
+This package provides an adapter to enable TRON DApps to connect to the [imToken Wallet App](https://token.im/).
 
 ## Demo
 
