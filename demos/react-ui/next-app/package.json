@@ -1,6 +1,6 @@
 {
     "name": "react-ui-next-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "private": true,
     "scripts": {
         "dev": "PORT=5002 next dev",
