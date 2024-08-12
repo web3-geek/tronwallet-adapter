@@ -1,6 +1,6 @@
 {
     "name": "@tronweb3/tronwallet-adapter-tokenpocket",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Wallet adapter for TokenPocket Wallet app.",
     "keywords": [
         "TRON",
