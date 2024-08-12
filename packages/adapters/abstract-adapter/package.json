@@ -39,7 +39,6 @@
         "eventemitter3": "^4.0.0"
     },
     "devDependencies": {
-        "shx": "^0.3.4",
-        "tronweb": "^4.4.0"
+        "shx": "^0.3.4"
     }
 }

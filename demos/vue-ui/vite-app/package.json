@@ -17,7 +17,7 @@
     "@tronweb3/tronwallet-adapter-walletconnect": "^2.0.0",
     "@tronweb3/tronwallet-adapters": "^1.2.2",
     "element-plus": "^2.4.3",
-    "tronweb": "5.0.0",
+    "tronweb": "5.3.2",
     "vue": "^3.3.8"
   },
   "devDependencies": {
