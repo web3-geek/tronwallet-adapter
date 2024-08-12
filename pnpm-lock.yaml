@@ -249,8 +249,8 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
       tronweb:
-        specifier: ~5.1.0
-        version: 5.1.1(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+        specifier: ~5.3.2
+        version: 5.3.2(bufferutil@4.0.7)(utf-8-validate@6.0.3)
       vconsole:
         specifier: '>=3.15.1'
         version: 3.15.1
@@ -291,6 +291,9 @@ importers:
       '@mui/material':
         specifier: ^5.10.10
         version: 5.16.4(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@noble/secp256k1':
+        specifier: 1.7.1
+        version: 1.7.1
       '@testing-library/jest-dom':
         specifier: ^5.16.5
         version: 5.17.0
@@ -448,8 +451,8 @@ importers:
         specifier: ^2.4.0
         version: 2.4.1(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       tronweb:
-        specifier: ^4.4.0
-        version: 4.4.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+        specifier: ^5.3.2
+        version: 5.3.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       tslib:
         specifier: ^2.5.0
         version: 2.6.3
@@ -518,8 +521,8 @@ importers:
         specifier: ^2.4.0
         version: 2.4.1(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tronweb:
-        specifier: ^4.4.0
-        version: 4.4.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+        specifier: ^5.3.2
+        version: 5.3.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       vconsole:
         specifier: '>=3.15.1'
         version: 3.15.1
@@ -573,8 +576,8 @@ importers:
         specifier: ^2.4.3
         version: 2.7.7(vue@3.4.34(typescript@5.5.4))
       tronweb:
-        specifier: 5.0.0
-        version: 5.0.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+        specifier: 5.3.2
+        version: 5.3.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       vue:
         specifier: ^3.3.8
         version: 3.4.34(typescript@5.5.4)
@@ -604,9 +607,6 @@ importers:
       shx:
         specifier: ^0.3.4
         version: 0.3.4
-      tronweb:
-        specifier: ^4.4.0
-        version: 4.4.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
 
   packages/adapters/abstract-adapter-evm:
     dependencies:
@@ -615,7 +615,7 @@ importers:
         version: 4.0.7
       jest:
         specifier: ^29.6.2
-        version: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))
+        version: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42))
       jest-environment-jsdom:
         specifier: ^29.6.2
         version: 29.7.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
@@ -623,9 +623,6 @@ importers:
       shx:
         specifier: ^0.3.4
         version: 0.3.4
-      tronweb:
-        specifier: ^4.4.0
-        version: 4.4.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
 
   packages/adapters/adapters:
     dependencies:
@@ -934,7 +931,7 @@ importers:
         version: 5.14.9
       jest:
         specifier: ^29.3.1
-        version: 29.7.0(@types/node@20.14.12)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.14.12)(typescript@4.9.3))
+        version: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))
       jest-environment-jsdom:
         specifier: ^29.3.1
         version: 29.7.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
@@ -2288,9 +2285,6 @@ packages:
   '@ethersproject/base64@5.7.0':
     resolution: {integrity: sha512-Dr8tcHt2mEbsZr/mwTPIQAf3Ai0Bks/7gTw9dSqk1mQvhW3XvRlmDJr/4n+wg1JmCl16NZue17CDh8xb/vZ0sQ==}
 
-  '@ethersproject/basex@5.7.0':
-    resolution: {integrity: sha512-ywlh43GwZLv2Voc2gQVTKBoVQ1mti3d8HK5aMxsfu/nRDnMmNqaSJ3r3n85HBByT8OpoY96SXM1FogC533T4zw==}
-
   '@ethersproject/bignumber@5.7.0':
     resolution: {integrity: sha512-n1CAdIHRWjSucQO3MC1zPSVgV/6dy/fjL9pMrPP9peL+QxEg9wOsVqwD4+818B6LUEtaXzVHQiuivzRoxPxUGw==}
 
@@ -2300,17 +2294,8 @@ packages:
   '@ethersproject/constants@5.7.0':
     resolution: {integrity: sha512-DHI+y5dBNvkpYUMiRQyxRBYBefZkJfo70VUkUAsRjcPs47muV9evftfZ0PJVCXYbAiCgght0DtcF9srFQmIgWA==}
 
-  '@ethersproject/contracts@5.7.0':
-    resolution: {integrity: sha512-5GJbzEU3X+d33CdfPhcyS+z8MzsTrBGk/sc+G+59+tPa9yFkl6HQ9D6L0QMgNTA9q8dT0XKxxkyp883XsQvbbg==}
-
   '@ethersproject/hash@5.7.0':
     resolution: {integrity: sha512-qX5WrQfnah1EFnO5zJv1v46a8HW0+E5xuBBDTwMFZLuVTx0tbU2kkx15NqdjxecrLGatQN9FGQKpb1FKdHCt+g==}
-
-  '@ethersproject/hdnode@5.7.0':
-    resolution: {integrity: sha512-OmyYo9EENBPPf4ERhR7oj6uAtUAhYGqOnIS+jE5pTXvdKBS99ikzq1E7Iv0ZQZ5V36Lqx1qZLeak0Ra16qpeOg==}
-
-  '@ethersproject/json-wallets@5.7.0':
-    resolution: {integrity: sha512-8oee5Xgu6+RKgJTkvEMl2wDgSPSAQ9MB/3JYjFV9jlKvcYHUXZC+cQp0njgmxdHkYWn8s6/IqIZYm0YWCjO/0g==}
 
   '@ethersproject/keccak256@5.7.0':
     resolution: {integrity: sha512-2UcPboeL/iW+pSg6vZ6ydF8tCnv3Iu/8tUmLLzWWGzxWKFFqOBQFLo6uLUv6BDrLgCDfN28RJ/wtByx+jZ4KBg==}
@@ -2321,29 +2306,14 @@ packages:
   '@ethersproject/networks@5.7.1':
     resolution: {integrity: sha512-n/MufjFYv3yFcUyfhnXotyDlNdFb7onmkSy8aQERi2PjNcnWQ66xXxa3XlS8nCcA8aJKJjIIMNJTC7tu80GwpQ==}
 
-  '@ethersproject/pbkdf2@5.7.0':
-    resolution: {integrity: sha512-oR/dBRZR6GTyaofd86DehG72hY6NpAjhabkhxgr3X2FpJtJuodEl2auADWBZfhDHgVCbu3/H/Ocq2uC6dpNjjw==}
-
   '@ethersproject/properties@5.7.0':
     resolution: {integrity: sha512-J87jy8suntrAkIZtecpxEPxY//szqr1mlBaYlQ0r4RCaiD2hjheqF9s1LVE8vVuJCXisjIP+JgtK/Do54ej4Sw==}
-
-  '@ethersproject/providers@5.7.2':
-    resolution: {integrity: sha512-g34EWZ1WWAVgr4aptGlVBF8mhl3VWjv+8hoAnzStu8Ah22VHBsuGzP17eb6xDVRzw895G4W7vvx60lFFur/1Rg==}
-
-  '@ethersproject/random@5.7.0':
-    resolution: {integrity: sha512-19WjScqRA8IIeWclFme75VMXSBvi4e6InrUNuaR4s5pTF2qNhcGdCUwdxUVGtDDqC00sDLCO93jPQoDUH4HVmQ==}
 
   '@ethersproject/rlp@5.7.0':
     resolution: {integrity: sha512-rBxzX2vK8mVF7b0Tol44t5Tb8gomOHkj5guL+HhzQ1yBh/ydjGnpw6at+X6Iw0Kp3OzzzkcKp8N9r0W4kYSs9w==}
 
-  '@ethersproject/sha2@5.7.0':
-    resolution: {integrity: sha512-gKlH42riwb3KYp0reLsFTokByAKoJdgFCwI+CCiX/k+Jm2mbNs6oOaCjYQSlI1+XBVejwH2KrmCbMAT/GnRDQw==}
-
   '@ethersproject/signing-key@5.7.0':
     resolution: {integrity: sha512-MZdy2nL3wO0u7gkB4nA/pEf8lu1TlFswPNmy8AiYkfKTdO6eXBJyUdmHO/ehm/htHw9K/qF8ujnTyUAD+Ry54Q==}
-
-  '@ethersproject/solidity@5.7.0':
-    resolution: {integrity: sha512-HmabMd2Dt/raavyaGukF4XxizWKhKQ24DoLtdNbBmNKUOPqwjsKQSdV9GQtj9CBEea9DlzETlVER1gYeXXBGaA==}
 
   '@ethersproject/strings@5.7.0':
     resolution: {integrity: sha512-/9nu+lj0YswRNSH0NXYqrh8775XNyEdUQAuf3f+SmOrnVewcJ5SBNAjF7lpgehKi4abvNNXyf+HX86czCdJ8Mg==}
@@ -2351,17 +2321,8 @@ packages:
   '@ethersproject/transactions@5.7.0':
     resolution: {integrity: sha512-kmcNicCp1lp8qanMTC3RIikGgoJ80ztTyvtsFvCYpSCfkjhD0jZ2LOrnbcuxuToLIUYYf+4XwD1rP+B/erDIhQ==}
 
-  '@ethersproject/units@5.7.0':
-    resolution: {integrity: sha512-pD3xLMy3SJu9kG5xDGI7+xhTEmGXlEqXU4OfNapmfnxLVY4EMSSRp7j1k7eezutBPH7RBN/7QPnwR7hzNlEFeg==}
-
-  '@ethersproject/wallet@5.7.0':
-    resolution: {integrity: sha512-MhmXlJXEJFBFVKrDLB4ZdDzxcBxQ3rLyCkhNqVu3CDYvR97E+8r01UgrI+TI99Le+aYm/in/0vp86guJuM7FCA==}
-
   '@ethersproject/web@5.7.1':
     resolution: {integrity: sha512-Gueu8lSvyjBWL4cYsWsjh6MtMwM0+H4HvqFPZfB6dV8ctbP9zFAO73VG1cMWae0FLPCtz0peKPpZY8/ugJJX2w==}
-
-  '@ethersproject/wordlists@5.7.0':
-    resolution: {integrity: sha512-S2TFNJNfHWVHNE6cNDjbVlZ6MgE17MIxMbMg2zv3wn+3XSJGosL1m9ZVv3GXCf/2ymSsQ+hRI5IzoMJTG6aoVA==}
 
   '@floating-ui/core@1.6.5':
     resolution: {integrity: sha512-8GrTWmoFhm5BsMZOTHeGD2/0FLKLQQHvO/ZmQga4tKempYRLz8aqJGqXVuQgisnMObq2YZ2SgkwctN1LOOxcqA==}
@@ -2897,6 +2858,9 @@ packages:
   '@noble/hashes@1.4.0':
     resolution: {integrity: sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg==}
     engines: {node: '>= 16'}
+
+  '@noble/secp256k1@1.7.1':
+    resolution: {integrity: sha512-hOUk6AyBFmqVrv7k5WAw/LpszxVbj9gGN4JRkIX52fdFAj1UA61KXmZDvqVEm+pOyec3+fIeZB02LYa/pWOArw==}
 
   '@noble/secp256k1@2.1.0':
     resolution: {integrity: sha512-XLEQQNdablO0XZOIniFQimiXsZDNwaYgL96dZwC54Q30imSbAOFf3NKtepc+cXyuZf5Q1HCgbqgZ2UFFuHVcEw==}
@@ -4383,9 +4347,6 @@ packages:
     resolution: {integrity: sha512-OXwN5b9pCUXNQHJpwwD2qP40byEmSgzj8B4ydSN0uMNYWiFmJ6x6KwUllMmfk8Rwu/HJDFR7U8ubsWBoN0Xp0A==}
     engines: {node: '>=8.9'}
 
-  aes-js@3.0.0:
-    resolution: {integrity: sha512-H7wUZRn8WpTq9jocdxQ2c8x2sKo9ZVmzfRE13GiNJXfp7NcKYEdvl3vspKjXox6RIG2VtaRe4JFvxG4rqp2Zuw==}
-
   aes-js@3.1.2:
     resolution: {integrity: sha512-e5pEa2kBnBOgR4Y/p20pskXI74UEz7de8ZGVo58asOtvSVG5YAbJeELPZxOmt+Bnz3rX753YKhfIn4X4l1PPRQ==}
 
@@ -4618,9 +4579,6 @@ packages:
     resolution: {integrity: sha512-QbUdXJVTpvUTHU7871ppZkdOLBeGUKBQWHkHrvN2V9IQWGMt61zf3B45BtzjxEJzYuj0JBjBZP/hmYS/R9pmAw==}
     engines: {node: '>=4'}
 
-  axios@0.26.1:
-    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
-
   axios@1.7.3:
     resolution: {integrity: sha512-Ar7ND9pU99eJ9GpoGQKhKf58GpUOgnzuaB7ueNQ5BMi0p+LZ5oaEnfF999fAArcTIBwXTCHAmGcHOZJaWPq9Nw==}
 
@@ -4732,9 +4690,6 @@ packages:
 
   batch@0.6.1:
     resolution: {integrity: sha512-x+VAiMRL6UPkx+kudNvxTl6hB2XNNCG2r+7wixVfIYwu/2HKRXimwQyaumLjMveWvT2Hkd/cAJw+QBMfJ/EKVw==}
-
-  bech32@1.1.4:
-    resolution: {integrity: sha512-s0IrSOzLlbvX7yp4WBfPITzpAU8sqQcpsmwXDiKwrG4r491vwCO/XpejasRNl0piBMe/DvP4Tz0mIS/X1DPJBQ==}
 
   better-path-resolve@1.0.0:
     resolution: {integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==}
@@ -6139,9 +6094,6 @@ packages:
 
   ethereum-cryptography@2.2.1:
     resolution: {integrity: sha512-r/W8lkHSiTLxUxW8Rf3u4HGB0xQweG2RyETjywylKZSzLWoWAijRz8WCuOtJ6wah+avllXBqZuk29HCCvhEIRg==}
-
-  ethers@5.7.2:
-    resolution: {integrity: sha512-wswUsmWo1aOK8rR7DIKiWSw9DbLWe6x98Jrn8wcTflTVvaXhAMaB5zGAXy0GYQEQp9iO1iSHWVyARQm11zUtyg==}
 
   ethers@6.13.2:
     resolution: {integrity: sha512-9VkriTTed+/27BGuY1s0hf441kqwHJ1wtN2edksEtiRvXx+soxRX3iSXTfFqq2+YwrOqbDoTHjIhQnjJRlzKmg==}
@@ -9579,9 +9531,6 @@ packages:
     resolution: {integrity: sha512-L0jRsrPpjdckP3oPug3/VxNKt2trR8TcabrM6FOAAlvC/9Phcmm+cuAgTlxBqdBR1WJx7Naj9WHw+aOmheSVbw==}
     engines: {node: '>= 12.13.0'}
 
-  scrypt-js@3.0.1:
-    resolution: {integrity: sha512-cdwTTnqPu0Hyvf5in5asVdZocVDTNRmR7XEcJuIzMjJeSHybHl7vpB66AzwTaIg6CLSbtjcxc8fqcySfnTkccA==}
-
   secure-json-parse@2.7.0:
     resolution: {integrity: sha512-6aU+Rwsezw7VR8/nyvKTx8QpWH9FrcYiXXlqC4z5d5XQBDRqtbfsRjnwGyqbi3gddNtWHuEk9OANUotL26qKUw==}
 
@@ -10200,15 +10149,6 @@ packages:
   trim-newlines@3.0.1:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
     engines: {node: '>=8'}
-
-  tronweb@4.4.0:
-    resolution: {integrity: sha512-0yPmjQE1drPcDtW4YCXFjtvDQmKc/utjKB2J6U5GDcWWhsGqE8yFjdIMJRa1yj1a/oFQNlthKMzw4Jd7lkWbYA==}
-
-  tronweb@5.0.0:
-    resolution: {integrity: sha512-cKwYWYSGJ5ROyY2ybWSHGF38puML4pCl4Uax7sEOtJpMnjgO0RWrs6swCj/6RnM75rPL1O+RZshGXD0JuED2zg==}
-
-  tronweb@5.1.1:
-    resolution: {integrity: sha512-/s7VZRIybbY5Y6n5CBhwaW49IO6GEvvreiQ7JTM9+ZjrsTVtaSJrwschfjEwoHl7ZmF21XXjHbs77k0kVo+OlQ==}
 
   tronweb@5.3.2:
     resolution: {integrity: sha512-iPcIjMCxb6H7FXMntAj47F3L+7jSideyQ7ZOvRj9MeZBh46SHevMrDDR57HzakUa/tT8VvlPFHtqFK4hzTLkXw==}
@@ -12435,7 +12375,7 @@ snapshots:
       '@types/node': 20.5.1
       chalk: 4.1.2
       cosmiconfig: 8.3.6(typescript@4.9.3)
-      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.9.3))(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))(typescript@4.9.3)
+      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.9.3))(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))(typescript@4.9.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -12851,11 +12791,6 @@ snapshots:
     dependencies:
       '@ethersproject/bytes': 5.7.0
 
-  '@ethersproject/basex@5.7.0':
-    dependencies:
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/properties': 5.7.0
-
   '@ethersproject/bignumber@5.7.0':
     dependencies:
       '@ethersproject/bytes': 5.7.0
@@ -12870,19 +12805,6 @@ snapshots:
     dependencies:
       '@ethersproject/bignumber': 5.7.0
 
-  '@ethersproject/contracts@5.7.0':
-    dependencies:
-      '@ethersproject/abi': 5.7.0
-      '@ethersproject/abstract-provider': 5.7.0
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
-      '@ethersproject/bignumber': 5.7.0
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/constants': 5.7.0
-      '@ethersproject/logger': 5.7.0
-      '@ethersproject/properties': 5.7.0
-      '@ethersproject/transactions': 5.7.0
-
   '@ethersproject/hash@5.7.0':
     dependencies:
       '@ethersproject/abstract-signer': 5.7.0
@@ -12895,37 +12817,6 @@ snapshots:
       '@ethersproject/properties': 5.7.0
       '@ethersproject/strings': 5.7.0
 
-  '@ethersproject/hdnode@5.7.0':
-    dependencies:
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/basex': 5.7.0
-      '@ethersproject/bignumber': 5.7.0
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/logger': 5.7.0
-      '@ethersproject/pbkdf2': 5.7.0
-      '@ethersproject/properties': 5.7.0
-      '@ethersproject/sha2': 5.7.0
-      '@ethersproject/signing-key': 5.7.0
-      '@ethersproject/strings': 5.7.0
-      '@ethersproject/transactions': 5.7.0
-      '@ethersproject/wordlists': 5.7.0
-
-  '@ethersproject/json-wallets@5.7.0':
-    dependencies:
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/hdnode': 5.7.0
-      '@ethersproject/keccak256': 5.7.0
-      '@ethersproject/logger': 5.7.0
-      '@ethersproject/pbkdf2': 5.7.0
-      '@ethersproject/properties': 5.7.0
-      '@ethersproject/random': 5.7.0
-      '@ethersproject/strings': 5.7.0
-      '@ethersproject/transactions': 5.7.0
-      aes-js: 3.0.0
-      scrypt-js: 3.0.1
-
   '@ethersproject/keccak256@5.7.0':
     dependencies:
       '@ethersproject/bytes': 5.7.0
@@ -12937,82 +12828,14 @@ snapshots:
     dependencies:
       '@ethersproject/logger': 5.7.0
 
-  '@ethersproject/pbkdf2@5.7.0':
-    dependencies:
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/sha2': 5.7.0
-
   '@ethersproject/properties@5.7.0':
     dependencies:
-      '@ethersproject/logger': 5.7.0
-
-  '@ethersproject/providers@5.7.2(bufferutil@4.0.7)(utf-8-validate@6.0.3)':
-    dependencies:
-      '@ethersproject/abstract-provider': 5.7.0
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
-      '@ethersproject/base64': 5.7.0
-      '@ethersproject/basex': 5.7.0
-      '@ethersproject/bignumber': 5.7.0
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/constants': 5.7.0
-      '@ethersproject/hash': 5.7.0
-      '@ethersproject/logger': 5.7.0
-      '@ethersproject/networks': 5.7.1
-      '@ethersproject/properties': 5.7.0
-      '@ethersproject/random': 5.7.0
-      '@ethersproject/rlp': 5.7.0
-      '@ethersproject/sha2': 5.7.0
-      '@ethersproject/strings': 5.7.0
-      '@ethersproject/transactions': 5.7.0
-      '@ethersproject/web': 5.7.1
-      bech32: 1.1.4
-      ws: 8.18.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
-  '@ethersproject/providers@5.7.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)':
-    dependencies:
-      '@ethersproject/abstract-provider': 5.7.0
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
-      '@ethersproject/base64': 5.7.0
-      '@ethersproject/basex': 5.7.0
-      '@ethersproject/bignumber': 5.7.0
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/constants': 5.7.0
-      '@ethersproject/hash': 5.7.0
-      '@ethersproject/logger': 5.7.0
-      '@ethersproject/networks': 5.7.1
-      '@ethersproject/properties': 5.7.0
-      '@ethersproject/random': 5.7.0
-      '@ethersproject/rlp': 5.7.0
-      '@ethersproject/sha2': 5.7.0
-      '@ethersproject/strings': 5.7.0
-      '@ethersproject/transactions': 5.7.0
-      '@ethersproject/web': 5.7.1
-      bech32: 1.1.4
-      ws: 8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
-  '@ethersproject/random@5.7.0':
-    dependencies:
-      '@ethersproject/bytes': 5.7.0
       '@ethersproject/logger': 5.7.0
 
   '@ethersproject/rlp@5.7.0':
     dependencies:
       '@ethersproject/bytes': 5.7.0
       '@ethersproject/logger': 5.7.0
-
-  '@ethersproject/sha2@5.7.0':
-    dependencies:
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/logger': 5.7.0
-      hash.js: 1.1.7
 
   '@ethersproject/signing-key@5.7.0':
     dependencies:
@@ -13022,15 +12845,6 @@ snapshots:
       bn.js: 5.2.1
       elliptic: 6.5.4
       hash.js: 1.1.7
-
-  '@ethersproject/solidity@5.7.0':
-    dependencies:
-      '@ethersproject/bignumber': 5.7.0
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/keccak256': 5.7.0
-      '@ethersproject/logger': 5.7.0
-      '@ethersproject/sha2': 5.7.0
-      '@ethersproject/strings': 5.7.0
 
   '@ethersproject/strings@5.7.0':
     dependencies:
@@ -13050,42 +12864,10 @@ snapshots:
       '@ethersproject/rlp': 5.7.0
       '@ethersproject/signing-key': 5.7.0
 
-  '@ethersproject/units@5.7.0':
-    dependencies:
-      '@ethersproject/bignumber': 5.7.0
-      '@ethersproject/constants': 5.7.0
-      '@ethersproject/logger': 5.7.0
-
-  '@ethersproject/wallet@5.7.0':
-    dependencies:
-      '@ethersproject/abstract-provider': 5.7.0
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
-      '@ethersproject/bignumber': 5.7.0
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/hash': 5.7.0
-      '@ethersproject/hdnode': 5.7.0
-      '@ethersproject/json-wallets': 5.7.0
-      '@ethersproject/keccak256': 5.7.0
-      '@ethersproject/logger': 5.7.0
-      '@ethersproject/properties': 5.7.0
-      '@ethersproject/random': 5.7.0
-      '@ethersproject/signing-key': 5.7.0
-      '@ethersproject/transactions': 5.7.0
-      '@ethersproject/wordlists': 5.7.0
-
   '@ethersproject/web@5.7.1':
     dependencies:
       '@ethersproject/base64': 5.7.0
       '@ethersproject/bytes': 5.7.0
-      '@ethersproject/logger': 5.7.0
-      '@ethersproject/properties': 5.7.0
-      '@ethersproject/strings': 5.7.0
-
-  '@ethersproject/wordlists@5.7.0':
-    dependencies:
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/hash': 5.7.0
       '@ethersproject/logger': 5.7.0
       '@ethersproject/properties': 5.7.0
       '@ethersproject/strings': 5.7.0
@@ -13328,6 +13110,41 @@ snapshots:
       - supports-color
       - ts-node
 
+  '@jest/core@29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42))':
+    dependencies:
+      '@jest/console': 29.7.0
+      '@jest/reporters': 29.7.0
+      '@jest/test-result': 29.7.0
+      '@jest/transform': 29.7.0
+      '@jest/types': 29.6.3
+      '@types/node': 18.19.42
+      ansi-escapes: 4.3.2
+      chalk: 4.1.2
+      ci-info: 3.9.0
+      exit: 0.1.2
+      graceful-fs: 4.2.11
+      jest-changed-files: 29.7.0
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42))
+      jest-haste-map: 29.7.0
+      jest-message-util: 29.7.0
+      jest-regex-util: 29.6.3
+      jest-resolve: 29.7.0
+      jest-resolve-dependencies: 29.7.0
+      jest-runner: 29.7.0
+      jest-runtime: 29.7.0
+      jest-snapshot: 29.7.0
+      jest-util: 29.7.0
+      jest-validate: 29.7.0
+      jest-watcher: 29.7.0
+      micromatch: 4.0.7
+      pretty-format: 29.7.0
+      slash: 3.0.0
+      strip-ansi: 6.0.1
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+      - ts-node
+
   '@jest/core@29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.14.12)(typescript@4.9.3))':
     dependencies:
       '@jest/console': 29.7.0
@@ -13377,7 +13194,7 @@ snapshots:
       exit: 0.1.2
       graceful-fs: 4.2.11
       jest-changed-files: 29.7.0
-      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))
       jest-haste-map: 29.7.0
       jest-message-util: 29.7.0
       jest-regex-util: 29.6.3
@@ -14167,6 +13984,8 @@ snapshots:
   '@noble/hashes@1.3.2': {}
 
   '@noble/hashes@1.4.0': {}
+
+  '@noble/secp256k1@1.7.1': {}
 
   '@noble/secp256k1@2.1.0': {}
 
@@ -17324,8 +17143,6 @@ snapshots:
       loader-utils: 2.0.4
       regex-parser: 2.3.0
 
-  aes-js@3.0.0: {}
-
   aes-js@3.1.2: {}
 
   aes-js@4.0.0-beta.5: {}
@@ -17578,12 +17395,6 @@ snapshots:
 
   axe-core@4.9.1: {}
 
-  axios@0.26.1:
-    dependencies:
-      follow-redirects: 1.15.6
-    transitivePeerDependencies:
-      - debug
-
   axios@1.7.3:
     dependencies:
       follow-redirects: 1.15.6
@@ -17777,8 +17588,6 @@ snapshots:
   base64-js@1.5.1: {}
 
   batch@0.6.1: {}
-
-  bech32@1.1.4: {}
 
   better-path-resolve@1.0.0:
     dependencies:
@@ -18297,7 +18106,7 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.9.3))(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))(typescript@4.9.3):
+  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.9.3))(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))(typescript@4.9.3):
     dependencies:
       '@types/node': 20.5.1
       cosmiconfig: 8.3.6(typescript@4.9.3)
@@ -18368,13 +18177,28 @@ snapshots:
       - supports-color
       - ts-node
 
+  create-jest@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)):
+    dependencies:
+      '@jest/types': 29.6.3
+      chalk: 4.1.2
+      exit: 0.1.2
+      graceful-fs: 4.2.11
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42))
+      jest-util: 29.7.0
+      prompts: 2.4.2
+    transitivePeerDependencies:
+      - '@types/node'
+      - babel-plugin-macros
+      - supports-color
+      - ts-node
+
   create-jest@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3)):
     dependencies:
       '@jest/types': 29.6.3
       chalk: 4.1.2
       exit: 0.1.2
       graceful-fs: 4.2.11
-      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))
       jest-util: 29.7.0
       prompts: 2.4.2
     transitivePeerDependencies:
@@ -19136,7 +18960,7 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.9.0(eslint@8.57.0)
       eslint-plugin-react: 7.35.0(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
@@ -19161,7 +18985,7 @@ snapshots:
       confusing-browser-globals: 1.0.11
       eslint: 8.57.0
       eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.9))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.9))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest: 25.7.0(@typescript-eslint/eslint-plugin@5.51.0(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint@8.57.0)(typescript@4.9.3))(eslint@8.57.0)(jest@27.5.1(bufferutil@4.0.8)(ts-node@10.9.2(@types/node@16.18.104)(typescript@4.9.3))(utf-8-validate@6.0.3))(typescript@4.9.3)
       eslint-plugin-jsx-a11y: 6.9.0(eslint@8.57.0)
       eslint-plugin-react: 7.35.0(eslint@8.57.0)
@@ -19191,7 +19015,7 @@ snapshots:
       enhanced-resolve: 5.17.1
       eslint: 8.57.0
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.6
       is-core-module: 2.15.0
@@ -19221,7 +19045,7 @@ snapshots:
       lodash: 4.17.21
       string-natural-compare: 3.0.1
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
@@ -19465,74 +19289,15 @@ snapshots:
       '@scure/bip32': 1.4.0
       '@scure/bip39': 1.3.0
 
-  ethers@5.7.2(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+  ethers@6.13.2(bufferutil@4.0.7)(utf-8-validate@6.0.3):
     dependencies:
-      '@ethersproject/abi': 5.7.0
-      '@ethersproject/abstract-provider': 5.7.0
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
-      '@ethersproject/base64': 5.7.0
-      '@ethersproject/basex': 5.7.0
-      '@ethersproject/bignumber': 5.7.0
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/constants': 5.7.0
-      '@ethersproject/contracts': 5.7.0
-      '@ethersproject/hash': 5.7.0
-      '@ethersproject/hdnode': 5.7.0
-      '@ethersproject/json-wallets': 5.7.0
-      '@ethersproject/keccak256': 5.7.0
-      '@ethersproject/logger': 5.7.0
-      '@ethersproject/networks': 5.7.1
-      '@ethersproject/pbkdf2': 5.7.0
-      '@ethersproject/properties': 5.7.0
-      '@ethersproject/providers': 5.7.2(bufferutil@4.0.7)(utf-8-validate@6.0.3)
-      '@ethersproject/random': 5.7.0
-      '@ethersproject/rlp': 5.7.0
-      '@ethersproject/sha2': 5.7.0
-      '@ethersproject/signing-key': 5.7.0
-      '@ethersproject/solidity': 5.7.0
-      '@ethersproject/strings': 5.7.0
-      '@ethersproject/transactions': 5.7.0
-      '@ethersproject/units': 5.7.0
-      '@ethersproject/wallet': 5.7.0
-      '@ethersproject/web': 5.7.1
-      '@ethersproject/wordlists': 5.7.0
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
-  ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@6.0.3):
-    dependencies:
-      '@ethersproject/abi': 5.7.0
-      '@ethersproject/abstract-provider': 5.7.0
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
-      '@ethersproject/base64': 5.7.0
-      '@ethersproject/basex': 5.7.0
-      '@ethersproject/bignumber': 5.7.0
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/constants': 5.7.0
-      '@ethersproject/contracts': 5.7.0
-      '@ethersproject/hash': 5.7.0
-      '@ethersproject/hdnode': 5.7.0
-      '@ethersproject/json-wallets': 5.7.0
-      '@ethersproject/keccak256': 5.7.0
-      '@ethersproject/logger': 5.7.0
-      '@ethersproject/networks': 5.7.1
-      '@ethersproject/pbkdf2': 5.7.0
-      '@ethersproject/properties': 5.7.0
-      '@ethersproject/providers': 5.7.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)
-      '@ethersproject/random': 5.7.0
-      '@ethersproject/rlp': 5.7.0
-      '@ethersproject/sha2': 5.7.0
-      '@ethersproject/signing-key': 5.7.0
-      '@ethersproject/solidity': 5.7.0
-      '@ethersproject/strings': 5.7.0
-      '@ethersproject/transactions': 5.7.0
-      '@ethersproject/units': 5.7.0
-      '@ethersproject/wallet': 5.7.0
-      '@ethersproject/web': 5.7.1
-      '@ethersproject/wordlists': 5.7.0
+      '@adraffy/ens-normalize': 1.10.1
+      '@noble/curves': 1.2.0
+      '@noble/hashes': 1.3.2
+      '@types/node': 18.15.13
+      aes-js: 4.0.0-beta.5
+      tslib: 2.4.0
+      ws: 8.17.1(bufferutil@4.0.7)(utf-8-validate@6.0.3)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -20846,6 +20611,25 @@ snapshots:
       - supports-color
       - ts-node
 
+  jest-cli@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)):
+    dependencies:
+      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42))
+      '@jest/test-result': 29.7.0
+      '@jest/types': 29.6.3
+      chalk: 4.1.2
+      create-jest: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42))
+      exit: 0.1.2
+      import-local: 3.2.0
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42))
+      jest-util: 29.7.0
+      jest-validate: 29.7.0
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - '@types/node'
+      - babel-plugin-macros
+      - supports-color
+      - ts-node
+
   jest-cli@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3)):
     dependencies:
       '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
@@ -20855,7 +20639,7 @@ snapshots:
       create-jest: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
       exit: 0.1.2
       import-local: 3.2.0
-      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))
       jest-util: 29.7.0
       jest-validate: 29.7.0
       yargs: 17.7.2
@@ -21034,7 +20818,38 @@ snapshots:
       strip-json-comments: 3.1.1
     optionalDependencies:
       '@types/node': 18.19.42
-      ts-node: 10.9.2(@types/node@18.19.42)(typescript@4.9.3)
+      ts-node: 10.9.2(@types/node@20.5.1)(typescript@4.9.3)
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+
+  jest-config@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)):
+    dependencies:
+      '@babel/core': 7.24.9
+      '@jest/test-sequencer': 29.7.0
+      '@jest/types': 29.6.3
+      babel-jest: 29.7.0(@babel/core@7.24.9)
+      chalk: 4.1.2
+      ci-info: 3.9.0
+      deepmerge: 4.3.1
+      glob: 7.2.3
+      graceful-fs: 4.2.11
+      jest-circus: 29.7.0(babel-plugin-macros@3.1.0)
+      jest-environment-node: 29.7.0
+      jest-get-type: 29.6.3
+      jest-regex-util: 29.6.3
+      jest-resolve: 29.7.0
+      jest-runner: 29.7.0
+      jest-util: 29.7.0
+      jest-validate: 29.7.0
+      micromatch: 4.0.7
+      parse-json: 5.2.0
+      pretty-format: 29.7.0
+      slash: 3.0.0
+      strip-json-comments: 3.1.1
+    optionalDependencies:
+      '@types/node': 18.19.42
+      ts-node: 10.9.2(@types/node@18.19.42)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -21066,37 +20881,6 @@ snapshots:
     optionalDependencies:
       '@types/node': 18.19.42
       ts-node: 10.9.2(@types/node@20.14.12)(typescript@4.9.3)
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - supports-color
-
-  jest-config@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3)):
-    dependencies:
-      '@babel/core': 7.24.9
-      '@jest/test-sequencer': 29.7.0
-      '@jest/types': 29.6.3
-      babel-jest: 29.7.0(@babel/core@7.24.9)
-      chalk: 4.1.2
-      ci-info: 3.9.0
-      deepmerge: 4.3.1
-      glob: 7.2.3
-      graceful-fs: 4.2.11
-      jest-circus: 29.7.0(babel-plugin-macros@3.1.0)
-      jest-environment-node: 29.7.0
-      jest-get-type: 29.6.3
-      jest-regex-util: 29.6.3
-      jest-resolve: 29.7.0
-      jest-runner: 29.7.0
-      jest-util: 29.7.0
-      jest-validate: 29.7.0
-      micromatch: 4.0.7
-      parse-json: 5.2.0
-      pretty-format: 29.7.0
-      slash: 3.0.0
-      strip-json-comments: 3.1.1
-    optionalDependencies:
-      '@types/node': 18.19.42
-      ts-node: 10.9.2(@types/node@20.5.1)(typescript@4.9.3)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -21975,12 +21759,12 @@ snapshots:
       - supports-color
       - ts-node
 
-  jest@29.7.0(@types/node@20.14.12)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.14.12)(typescript@4.9.3)):
+  jest@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)):
     dependencies:
-      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.14.12)(typescript@4.9.3))
+      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42))
       '@jest/types': 29.6.3
       import-local: 3.2.0
-      jest-cli: 29.7.0(@types/node@20.14.12)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.14.12)(typescript@4.9.3))
+      jest-cli: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42))
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -24308,8 +24092,6 @@ snapshots:
       ajv-formats: 2.1.1(ajv@8.17.1)
       ajv-keywords: 5.1.0(ajv@8.17.1)
 
-  scrypt-js@3.0.1: {}
-
   secure-json-parse@2.7.0: {}
 
   select-hose@2.0.0: {}
@@ -24990,52 +24772,19 @@ snapshots:
 
   trim-newlines@3.0.1: {}
 
-  tronweb@4.4.0(bufferutil@4.0.8)(utf-8-validate@6.0.3):
+  tronweb@5.3.2(bufferutil@4.0.7)(utf-8-validate@6.0.3):
     dependencies:
       '@babel/runtime': 7.24.8
-      axios: 0.26.1
-      bignumber.js: 9.1.2
-      elliptic: 6.5.6
-      ethers: 5.7.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)
-      eventemitter3: 3.1.2
-      injectpromise: 1.0.0
-      lodash: 4.17.21
-      semver: 7.6.3
-      validator: 13.12.0
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - utf-8-validate
-
-  tronweb@5.0.0(bufferutil@4.0.8)(utf-8-validate@6.0.3):
-    dependencies:
-      '@babel/runtime': 7.24.8
+      '@ethersproject/abi': 5.7.0
       '@tronweb3/google-protobuf': 3.21.2
-      axios: 0.26.1
+      axios: 1.7.3
       bignumber.js: 9.1.2
-      elliptic: 6.5.6
-      ethers: 5.7.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+      ethereum-cryptography: 2.2.1
+      ethers: 6.13.2(bufferutil@4.0.7)(utf-8-validate@6.0.3)
       eventemitter3: 3.1.2
       injectpromise: 1.0.0
       lodash: 4.17.21
-      semver: 7.6.3
-      validator: 13.12.0
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - utf-8-validate
-
-  tronweb@5.1.1(bufferutil@4.0.7)(utf-8-validate@6.0.3):
-    dependencies:
-      '@babel/runtime': 7.24.8
-      '@tronweb3/google-protobuf': 3.21.2
-      axios: 0.26.1
-      bignumber.js: 9.1.2
-      elliptic: 6.5.6
-      ethers: 5.7.2(bufferutil@4.0.7)(utf-8-validate@6.0.3)
-      eventemitter3: 3.1.2
-      injectpromise: 1.0.0
-      lodash: 4.17.21
+      querystring-es3: 0.2.1
       semver: 7.6.3
       validator: 13.12.0
     transitivePeerDependencies:
@@ -25101,6 +24850,24 @@ snapshots:
       diff: 4.0.2
       make-error: 1.3.6
       typescript: 4.9.3
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
+    optional: true
+
+  ts-node@10.9.2(@types/node@18.19.42):
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      '@tsconfig/node10': 1.0.11
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.4
+      '@types/node': 18.19.42
+      acorn: 8.12.1
+      acorn-walk: 8.3.3
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     optional: true
@@ -26184,6 +25951,11 @@ snapshots:
   ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     optionalDependencies:
       bufferutil: 4.0.8
+      utf-8-validate: 6.0.3
+
+  ws@8.17.1(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+    optionalDependencies:
+      bufferutil: 4.0.7
       utf-8-validate: 6.0.3
 
   ws@8.17.1(bufferutil@4.0.8)(utf-8-validate@6.0.3):
