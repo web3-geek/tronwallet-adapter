@@ -17,6 +17,11 @@ This repository contains wallet adapters and components for Tron DApps. With out
 -   [WalletConnect](https://walletconnect.org): `v2.0`
 -   [imToken App](https://token.im/): All versions
 
+### Add support for new wallet
+Follow these steps to support new wallets:
+1. List your wallet to [Tron Wallet](https://tron.network/wallet) .
+2. Open an issue in this repository or fork the repository and implement the according adapter.
+
 ## Introduction
 
 ### Adapters
@@ -400,8 +405,8 @@ pnpm example
 > As the repo uses `pnpm` to manage workspace, please install `Nodejs` and `pnpm` first.
 > The following is required:
 >
-> -   Nodejs >= 16
-> -   pnpm >= 7
+> -   Nodejs >= 18
+> -   pnpm >= 9
 
 ## Which package should developers use ?
 
@@ -421,7 +426,7 @@ Welcome to contribute your idea!
     ```bash
     git clone https://github.com/web3-geek/tronwallet-adapter.git
     ```
-2. Install Nodejs@16.x and pnpm@7.x
+2. Install Nodejs@18.x and pnpm@9.x
 3. Install dependencies
     ```bash
     pnpm install
