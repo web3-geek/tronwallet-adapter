@@ -1,6 +1,6 @@
 # `@tronweb3/tronwallet-adapter-gatewallet`
 
-This package provides an adapter to enable TRON DApps to connect to the [Gate Wallet extension](https://www.gate.io/mobileapp) and [Gate Wallet App](https://www.gate.io/mobileapp).
+This package provides an adapter to enable TRON DApps to connect to the [Gate Wallet App](https://www.gate.io/mobileapp).
 
 ## Demo
 
@@ -76,6 +76,6 @@ interface GateWalletAdapterConfig {
 
 ### Caveats
 
--   GateWallet App and Extension doesn't implement `multiSign()` and `switchChain()`.
+-   GateWallet App doesn't implement `multiSign()` and `switchChain()`.
 
-For more information about tronwallet adapters, please refer to [`@tronweb3/tronwallet-adapters`](https://github.com/tronprotocol/tronwallet-adapter/tree/main/packages/adapters/adapters)
+For more information about tronwallet adapters, please refer to [`@tronweb3/tronwallet-adapters`](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/adapters)
