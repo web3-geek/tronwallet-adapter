@@ -4,7 +4,7 @@
     "version": "0.0.2",
     "type": "module",
     "scripts": {
-        "dev": "vite",
+        "dev": "vite --force",
         "build": "tsc && vite build",
         "preview": "vite preview",
         "ganache": "node scripts/ganache.cjs"
@@ -44,7 +44,8 @@
         "@vitejs/plugin-react": "^4.2.1",
         "dotenv": "^16.3.1",
         "typescript": "^4.6.4",
-        "vite": "^5.2.11"
+        "vite": "^5.2.11",
+        "vite-plugin-node-polyfills": "^0.22.0"
     },
     "overrides": {
         "@ledgerhq/errors": "6.10.0",
