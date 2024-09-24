@@ -11,7 +11,7 @@ export default defineConfig({
             targets: ['IE 11'],
         }),
         nodePolyfills({
-            include: ['crypto', 'buffer', 'stream'],
+            // include: ['crypto', 'buffer', 'stream'],
             globals: {
                 Buffer: true,
             }

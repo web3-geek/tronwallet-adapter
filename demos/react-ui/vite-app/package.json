@@ -13,6 +13,7 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.10",
+    "@noble/secp256k1": "1.7.1",
     "@tronweb3/tronwallet-abstract-adapter": "^1.1.0",
     "@tronweb3/tronwallet-adapter-ledger": "^1.1.1",
     "@tronweb3/tronwallet-adapter-react-hooks": "^1.0.0",
