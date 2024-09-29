@@ -15,6 +15,8 @@ As `@tronweb3/tronwallet-adapters` exports adapter of each wallet , you can use 
 | [`@tronweb3/tronwallet-adapter-bitget`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-bitkeep)              | adapter for [BitGet](https://bitget.com/)               | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/bitkeep)       |
 | [`@tronweb3/tronwallet-adapter-okxwallet`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-okxwallet)         | adapter for [Okx Wallet](https://okx.com/)              | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/okxwallet)     |
 | [`@tronweb3/tronwallet-adapter-ledger`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-ledger)               | adapter for [Ledger](https://www.ledger.com/)           | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/ledger)        |
+| [`@tronweb3/tronwallet-adapter-imtoken`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-imtoken)               | adapter for [imToken](https://token.im/)           | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/imtoken)        |
+
 
 ## Usage
 
@@ -325,12 +327,13 @@ try {
 -   **TronLink Doesn't support `disconnect` by DApp**. As TronLinkAdapter doesn't support disconnect by DApp website, call `adapter.disconnect()` won't disconnect from TronLink extension really.
 -   **Auto open TronLink app in mobile browser**. If developers call `connect()` method in mobile browser, it will open DApp in TronLink app to get tronlink wallet.
 
-### Others adapters
+### Other adapters
 
-Others adapters `Constructor` config api can be found in their source code `README`.
+Other adapters `Constructor` config api can be found in their source code `README`.
 
 -   [TokenPocketAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/tokenpocket)
 -   [BitGetAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/bitkeep)
 -   [OkxWalletAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/okxwallet)
 -   [WalletConnectAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/walletconnect)
 -   [LedgerAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/ledger)
+-   [ImTokenAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/imtoken)

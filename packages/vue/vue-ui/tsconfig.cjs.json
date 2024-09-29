@@ -4,6 +4,7 @@
     "exclude": ["test"],
     "compilerOptions": {
         "outDir": "lib/cjs",
-        "jsx": "preserve"
+        "jsx": "preserve",
+        "jsxImportSource": "vue"
     }
 }

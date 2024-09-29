@@ -1,6 +1,6 @@
-import React, { createRef, forwardRef, useImperativeHandle } from 'react';
+import React, { act, createRef, forwardRef, useImperativeHandle } from 'react';
+import type { Root } from 'react-dom/client';
 import { createRoot } from 'react-dom/client';
-import { act } from 'react-dom/test-utils';
 import { useLocalStorage } from '../../src/useLocalStorage.js';
 import 'jest-localstorage-mock';
 
@@ -25,12 +25,11 @@ const TestComponent = forwardRef(function TestComponent(_props, ref) {
         }),
         [value, setValue]
     );
-    return null;
+    return <></>;
 });
 let container: HTMLDivElement | null;
-let root: ReturnType<typeof createRoot>;
+let root: Root;
 let ref: React.RefObject<TestRefType>;
-
 function renderTest() {
     act(() => {
         root.render(<TestComponent ref={ref} />);
@@ -44,6 +43,7 @@ beforeEach(function () {
     document.body.appendChild(container);
     root = createRoot(container);
     ref = createRef();
+    root.render(<TestComponent ref={ref} />);
 });
 afterEach(function () {
     act(() => {

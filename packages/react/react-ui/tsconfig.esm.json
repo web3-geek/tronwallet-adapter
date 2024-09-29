@@ -5,6 +5,7 @@
     "compilerOptions": {
         "outDir": "lib/esm",
         "declarationDir": "lib/types",
-        "jsx": "react"
+        "jsx": "react",
+        "types": ["react", "react-dom", "jest"]
     }
 }

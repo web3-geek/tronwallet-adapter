@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import legacy from '@vitejs/plugin-legacy';
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,6 +10,12 @@ export default defineConfig({
         legacy({
             targets: ['>0.3%', 'defaults'],
         }),
+        nodePolyfills({
+            include: ['crypto', 'buffer', 'stream'],
+            globals: {
+                Buffer: true,
+            }
+        })
     ],
     define: {
         global: 'window',

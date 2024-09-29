@@ -3,7 +3,9 @@
  */
 import { TronLinkAdapter } from '../../src/adapter.js';
 import { MockTron } from './mock.js';
-
+Object.defineProperty(global, 'performance', {
+    writable: true,
+});
 globalThis.window = {
     open: jest.fn(),
     location: {

@@ -1,6 +1,6 @@
 {
     "name": "@tronweb3/tronwallet-abstract-adapter",
-    "version": "1.1.6",
+    "version": "1.1.7",
     "description": "Abstract interface definition of Tron Wallet Adapters.",
     "author": "web3-geek",
     "repository": {
@@ -39,7 +39,6 @@
         "eventemitter3": "^4.0.0"
     },
     "devDependencies": {
-        "shx": "^0.3.4",
-        "tronweb": "^4.4.0"
+        "shx": "^0.3.4"
     }
 }

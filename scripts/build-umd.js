@@ -13,13 +13,14 @@ const { resolve } = require('path');
 const inputOptions = {
     input: './lib/cjs/index.js',
     plugins: [commonjs(), nodeResolve(), json(), nodePolyfills()],
-    external: ['@walletconnect/sign-client'],
+    external: ['@walletconnect/sign-client', '@walletconnect/modal'],
 };
 const commonOptions = {
     format: 'umd',
     name: getOutputName(),
     globals: {
         '@walletconnect/sign-client': '@walletconnect/sign-client',
+        '@walletconnect/modal': '@walletconnect/modal',
     },
     inlineDynamicImports: true,
 };

@@ -2,7 +2,9 @@
     "extends": "../../../tsconfig.cjs.json",
     "include": ["src"],
     "compilerOptions": {
+        "lib": ["ESNext", "DOM"],
         "outDir": "lib/cjs",
-        "jsx": "preserve"
+        "jsx": "preserve",
+        "jsxImportSource": "vue"
     }
 }

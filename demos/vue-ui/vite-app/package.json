@@ -1,15 +1,15 @@
 {
   "name": "vite-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --force",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@noble/secp256k1": "^2.0.0",
+    "@noble/secp256k1": "^1.7.1",
     "@tronweb3/tronwallet-abstract-adapter": "^1.1.6",
     "@tronweb3/tronwallet-adapter-tronlink": "^1.1.9",
     "@tronweb3/tronwallet-adapter-vue-hooks": "^1.0.0",
@@ -17,7 +17,7 @@
     "@tronweb3/tronwallet-adapter-walletconnect": "^2.0.0",
     "@tronweb3/tronwallet-adapters": "^1.2.2",
     "element-plus": "^2.4.3",
-    "tronweb": "5.0.0",
+    "tronweb": "5.3.2",
     "vue": "^3.3.8"
   },
   "devDependencies": {
@@ -25,6 +25,7 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "typescript": "^5.2.2",
     "vite": "^5.2.11",
+    "vite-plugin-node-polyfills": "^0.22.0",
     "vue-tsc": "^2.0.21"
   },
   "overrides": {

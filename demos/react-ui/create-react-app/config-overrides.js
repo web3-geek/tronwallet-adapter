@@ -13,7 +13,8 @@ module.exports = function override(config, env) {
     'zlib': require.resolve('browserify-zlib'),
     'path': require.resolve('path-browserify'),
     'stream': require.resolve('stream-browserify'),
-    'crypto': require.resolve('crypto-browserify')
+    'crypto': require.resolve('crypto-browserify'),
+    'vm': require.resolve('vm-browserify'),
   };
 
   config.plugins.push(
@@ -32,7 +33,10 @@ module.exports = function override(config, env) {
       fullySpecified: false // disable the behaviour
     }
   });
-
+  config.module.rules.push({
+    test: /\.cjs$/,
+    type: 'javascript/auto'
+  });
   // // react-dnd
   // config.resolve.alias = {
   //   ...config.resolve.alias,
