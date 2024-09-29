@@ -1,0 +1,62 @@
+{
+    "name": "@tronweb3/tronwallet-adapter-gatewallet",
+    "version": "1.0.0",
+    "description": "Wallet adapter for Gate Wallet extension and Gate Wallet app.",
+    "keywords": [
+        "TRON",
+        "TronWeb",
+        "Gate Wallet"
+    ],
+    "author": "web3-geek",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/web3-geek/tronwallet-adapter.git"
+    },
+    "license": "MIT",
+    "type": "module",
+    "sideEffects": false,
+    "engines": {
+        "node": ">=16",
+        "pnpm": ">=7"
+    },
+    "main": "./lib/cjs/index.js",
+    "module": "./lib/esm/index.js",
+    "types": "./lib/types/index.d.ts",
+    "exports": {
+        "require": "./lib/cjs/index.js",
+        "import": "./lib/esm/index.js",
+        "types": "./lib/types/index.d.ts"
+    },
+    "files": [
+        "lib",
+        "src",
+        "LICENSE"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "clean": "shx mkdir -p lib && shx rm -rf lib",
+        "package": "shx echo '{ \"type\": \"commonjs\" }' > lib/cjs/package.json",
+        "test": "jest",
+        "test:coverage": "jest  --coverage",
+        "build:umd": "node ../../../scripts/build-umd.js"
+    },
+    "dependencies": {
+        "@tronweb3/tronwallet-abstract-adapter": "workspace:^",
+        "@tronweb3/tronwallet-adapter-tronlink": "workspace:^"
+    },
+    "devDependencies": {
+        "@testing-library/dom": "^8.20.0",
+        "jest-environment-jsdom": "^29.3.1",
+        "shx": "^0.3.4"
+    },
+    "bugs": {
+        "url": "https://github.com/web3-geek/tronwallet-adapter/issues"
+    },
+    "homepage": "https://github.com/web3-geek/tronwallet-adapter#readme",
+    "directories": {
+        "lib": "lib",
+        "test": "tests"
+    }
+}
