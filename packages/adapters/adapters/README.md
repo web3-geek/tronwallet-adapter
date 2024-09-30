@@ -338,3 +338,4 @@ Other adapters `Constructor` config api can be found in their source code `READM
 -   [WalletConnectAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/walletconnect)
 -   [LedgerAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/ledger)
 -   [ImTokenAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/imtoken)
+-   [GateWalletAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/gatewallet)
