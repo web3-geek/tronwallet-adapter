@@ -36,6 +36,11 @@ Follow these steps to support new wallets:
 1. List your wallet to [Tron Wallet](https://tron.network/wallet) .
 2. Open an issue in this repository or fork the repository and implement the according adapter.
 
+### Add support for new wallet
+Follow these steps to support new wallets:
+1. List your wallet to [Tron Wallet](https://tron.network/wallet) .
+2. Open an issue in this repository or fork the repository and implement the according adapter.
+
 ## Introduction
 
 ### Adapters
