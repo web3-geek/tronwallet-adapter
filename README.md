@@ -6,16 +6,30 @@ This repository contains wallet adapters and components for Tron DApps. With out
 
 ### Supported
 
--   [TronLink App](https://www.tronlink.org/): All versions
--   [TronLink Extension](https://www.tronlink.org/): All versions
--   [BitKeep App](https://bitkeep.com/): All versions
--   [BitKeep Extension](https://bitkeep.com/): All versions
--   [OkxWallet App](https://okx.com/): Android all versions
--   [OkxWallet Extension](https://okx.com/): All versions
--   [TokenPocket App](https://www.tokenpocket.pro/): All versions
--   [Ledger](https://www.ledger.com/): All versions
--   [WalletConnect](https://walletconnect.org): `v2.0`
--   [imToken App](https://token.im/): All versions
+| Wallet Name |  platform | version |
+| ------------- | ---------- | ----- |
+| [TronLink](https://www.tronlink.org/)| Android | >= 1.0.0 |
+| | IOS | >= 1.0.0 |
+|  |Browser Extension | >= 1.0.0|
+| [BitGet](https://web3.bitget.com/en) | Android | >= 4.0.0 |
+| | IOS | >= 4.0.0 |
+|  |Browser Extension | >= 1.0.0 |
+| [OkxWallet](https://okx.com/) | Android | >= 6.0.0 |
+| | IOS | >= 6.0.0 |
+|  |Browser Extension | >= 3.0.0 |
+| [TokenPocket](https://www.tokenpocket.pro/) | Android | >= 1.1.2 |
+| | IOS | >= 3.1.3 |
+|  |Browser Extension | Not Support |
+| [imToken](https://token.im/) | Android | >= 2.5.0 |
+| | IOS | >= 2.5.0 |
+|  |Browser Extension | Not Support |
+| [gate.io](https://www.gate.io/web3) | Android | >= 6.30.10 |
+| | IOS | >= 6.20.1 |
+|  |Browser Extension | Not Support |
+| [Ledger](https://www.ledger.com/) | - | All versions |
+| [WalletConnect](https://walletconnect.org) | - | >= v2.0 |
+
+> **Note**: In case wallet developers intend to release breaking changes, you can [open an issue here](https://github.com/web3-geek/tronwallet-adapter/issues/new) to inform us, thus enabling us to update the new protocols accordingly.
 
 ### Add support for new wallet
 Follow these steps to support new wallets:
@@ -167,6 +181,7 @@ tronwallet-adapter
 |   |   ├─bitkeep # adapter for Bitget Wallet
 |   |   ├─okxwallet # adapter for Okx Wallet
 |   |   ├─imtoken # adapter for imToken Wallet
+|   |   ├─gatewallet # adapter for gate.io Wallet
 |   ├─react
 |   |   ├─react-hooks # react hooks to manage wallet state
 |   |   ├─react-ui # react ui components to select/connect wallets
@@ -199,6 +214,7 @@ You can use the `@tronweb3/tronwallet-adapters` package, or add the individual w
 | [bitkeep](https://bitkeep.com/)             | Adapter for BitKeep extension and BitKeep App(IOS and Android)   | [`@tronweb3/tronwallet-adapter-bitkeep`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-bitkeep)             |
 | [okxwallet](https://www.okx.com/)           | Adapter for Okx Wallet extension and App(Android)                | [`@tronweb3/tronwallet-adapter-okxwallet`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-okxwallet)         |
 | [imtoken](https://token.im/)                | Adapter for imToken Wallet App(IOS and Android)                  | [`@tronweb3/tronwallet-adapter-imtoken`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-imtoken)             |
+| [gatewallet](https://www.gate.io/web3)                | Adapter for gate.io Wallet App(IOS and Android)                  | [`@tronweb3/tronwallet-adapter-gatewallet`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-gatewallet)             |
 
 ### React Components
 
@@ -222,6 +238,7 @@ This package contains all wallet adapters for Tron including:
 -   [BitKeep](https://bitkeep.com).
 -   [Okx Wallet](https://okx.com).
 -   [imToken Wallet](https://token.im/).
+-   [gate.io Wallet](https://www.gate.io/web3) 
 
 Code example：
 
