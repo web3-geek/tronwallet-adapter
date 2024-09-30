@@ -1,11 +1,12 @@
 {
     "name": "@tronweb3/tronwallet-adapter-gatewallet",
     "version": "1.0.0",
-    "description": "Wallet adapter for Gate Wallet extension and Gate Wallet app.",
+    "description": "Wallet adapter for Gate Wallet app.",
     "keywords": [
         "TRON",
         "TronWeb",
-        "Gate Wallet"
+        "Gate Wallet",
+        "Gate.io"
     ],
     "author": "web3-geek",
     "repository": {
@@ -16,8 +17,8 @@
     "type": "module",
     "sideEffects": false,
     "engines": {
-        "node": ">=16",
-        "pnpm": ">=7"
+        "node": ">=18",
+        "pnpm": ">=9"
     },
     "main": "./lib/cjs/index.js",
     "module": "./lib/esm/index.js",

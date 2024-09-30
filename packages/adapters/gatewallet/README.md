@@ -77,7 +77,7 @@ interface GateWalletAdapterConfig {
 ### Caveats
 
 - GateWallet App doesn't implement `multiSign()` and `switchChain()`.
-- Wallet imported with keystore in GateWallet does not support Tron Dapp.
-- It may doesn't support Tron Dapp on some old Android devices.
+- Wallet imported by keystore in GateWallet does not support Tron Dapp.
+- It may doesn't support Tron Dapp on some **old Android devices**.
 
 For more information about tronwallet adapters, please refer to [`@tronweb3/tronwallet-adapters`](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/adapters)
