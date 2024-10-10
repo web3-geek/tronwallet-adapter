@@ -13,7 +13,7 @@ new vConsole();
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <ThemeProvider theme={theme}>
-            <App></App>
+            <App />
             <Toaster />
         </ThemeProvider>
     </React.StrictMode>
