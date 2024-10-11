@@ -15,7 +15,11 @@ await adapter.connect();
 console.log(adapter.address);
 
 // create a send TRX transaction
-const unSignedTransaction = await window.foxwallet.tronLink.tronWeb.transactionBuilder.sendTrx(targetAddress, 100, adapter.address);
+const unSignedTransaction = await window.foxwallet.tronLink.tronWeb.transactionBuilder.sendTrx(
+    targetAddress,
+    100,
+    adapter.address
+);
 // using adapter to sign the transaction
 const signedTransaction = await adapter.signTransaction(unSignedTransaction);
 // broadcast the transaction
@@ -54,11 +58,6 @@ interface FoxWalletAdapterConfig {
     export enum NetworkType {
         Mainnet = 'Mainnet',
         Shasta = 'Shasta',
-        Nile = 'Nile',
-        /**
-         * When use custom node
-         */
-        Unknown = 'Unknown',
     }
 
     export type Network = {
@@ -72,16 +71,16 @@ interface FoxWalletAdapterConfig {
 
 ### Caveats
 
-- FoxWallet App doesn't implement `switchChain()`.
-- Only support `NetworkType.Mainnet`, `NetworkType.Shasta` currently.
-- In foxwallet, `tronWeb` is a dynamic instance that will be reinitialized when necessary, so the way to access `tronWeb` ​​instance from FoxWallet:
-    - Recommend:
-    ```typescript 
-    const balance = await window.foxwallet.tronLink.tronWeb.trx.getBalance(address);
-    ``` 
-    - Not recommend:
+-   FoxWallet App doesn't implement `switchChain()`.
+-   Only support `NetworkType.Mainnet`, `NetworkType.Shasta` currently.
+-   In FoxWallet, `tronWeb` is a dynamic instance that will be reinitialized when necessary, so the way to access `tronWeb` ​​instance from FoxWallet:
+    -   Recommend:
     ```typescript
-    const tronWeb = window.foxwallet.tronLink.tronWeb; 
+    const balance = await window.foxwallet.tronLink.tronWeb.trx.getBalance(address);
+    ```
+    -   Not recommend:
+    ```typescript
+    const tronWeb = window.foxwallet.tronLink.tronWeb;
     const balance = tronWeb.trx.getBalance(address);
     ```
 
