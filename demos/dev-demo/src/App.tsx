@@ -12,6 +12,7 @@ import { MetamaskAdapterDemo } from './Metamask.js';
 import { TronLinkEvmAdapter } from '@tronweb3/tronwallet-adapter-tronlink-evm';
 import { TronLinkEvmAdapterDemo } from './TronLinkEvmDemo.js';
 import { GateWalletAdapterDemo } from './GateWalletAdapterDemo.js';
+import { BybitWalletAdapterDemo } from './BybitWalletAdapterDemo.js';
 interface TabPanelProps {
     children?: React.ReactNode;
     index: number;
@@ -52,6 +53,7 @@ function App() {
                         <Tab label="MetaMaskWalletAdapter Demo" />
                         <Tab label="TronlinkEvmWalletAdapter Demo" />
                         <Tab label="Gate WalletAdapter Demo" />
+                        <Tab label="Bybit Wallet Adapter Demo" />
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>
@@ -86,6 +88,9 @@ function App() {
                 </TabPanel>
                 <TabPanel value={value} index={10}>
                     <GateWalletAdapterDemo></GateWalletAdapterDemo>
+                </TabPanel>
+                <TabPanel value={value} index={11}>
+                    <BybitWalletAdapterDemo></BybitWalletAdapterDemo>
                 </TabPanel>
             </Box>
         </div>
