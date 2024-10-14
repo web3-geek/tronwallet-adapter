@@ -677,6 +677,9 @@ importers:
       '@tronweb3/tronwallet-adapter-foxwallet':
         specifier: workspace:^
         version: link:../foxwallet
+      '@tronweb3/tronwallet-adapter-bybit-wallet':
+        specifier: workspace:^
+        version: link:../bybit
       '@tronweb3/tronwallet-adapter-gatewallet':
         specifier: workspace:^
         version: link:../gatewallet
@@ -747,6 +750,13 @@ importers:
         version: link:../abstract-adapter
       '@tronweb3/tronwallet-adapter-tronlink':
         specifier: workspace:^
+  packages/adapters/bybit:
+    dependencies:
+      '@tronweb3/tronwallet-abstract-adapter':
+        specifier: ^1.1.0
+        version: link:../abstract-adapter
+      '@tronweb3/tronwallet-adapter-tronlink':
+        specifier: ^1.1.9
         version: link:../tronlink
     devDependencies:
       '@testing-library/dom':
@@ -13270,7 +13280,7 @@ snapshots:
       - supports-color
       - ts-node
 
-  '@jest/core@29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))':
+  '@jest/core@29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.14.12)(typescript@5.5.4))':
     dependencies:
       '@jest/console': 29.7.0
       '@jest/reporters': 29.7.0
@@ -13284,7 +13294,7 @@ snapshots:
       exit: 0.1.2
       graceful-fs: 4.2.11
       jest-changed-files: 29.7.0
-      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.14.12)(typescript@5.5.4))
       jest-haste-map: 29.7.0
       jest-message-util: 29.7.0
       jest-regex-util: 29.6.3
@@ -14839,7 +14849,7 @@ snapshots:
     dependencies:
       '@tronweb3/tronwallet-abstract-adapter': 1.1.6
       '@tronweb3/walletconnect-tron': 2.0.0(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)
-      '@wagmi/core': 1.4.13(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
+      '@wagmi/core': 1.4.13(@types/react@18.3.3)(bufferutil@4.0.8)(immer@9.0.21)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
       '@walletconnect/sign-client': 2.14.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       '@walletconnect/types': 2.14.0
       viem: 0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3)
@@ -14938,7 +14948,7 @@ snapshots:
     dependencies:
       '@tronweb3/tronwallet-abstract-adapter': 1.1.6
       '@tronweb3/walletconnect-tron': 3.0.0(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)
-      '@wagmi/core': 1.4.13(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
+      '@wagmi/core': 1.4.13(@types/react@18.3.3)(bufferutil@4.0.8)(immer@9.0.21)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
       '@walletconnect/sign-client': 2.14.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       '@walletconnect/types': 2.14.0
       viem: 0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3)
@@ -16323,39 +16333,6 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@wagmi/core@1.4.13(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))':
-    dependencies:
-      '@wagmi/connectors': 3.1.11(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
-      abitype: 0.8.7(typescript@5.5.4)
-      eventemitter3: 4.0.7
-      viem: 0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3)
-      zustand: 4.5.4(@types/react@18.3.3)(immer@9.0.21)(react@18.3.1)
-    optionalDependencies:
-      typescript: 5.5.4
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - encoding
-      - immer
-      - ioredis
-      - react
-      - supports-color
-      - uWebSockets.js
-      - utf-8-validate
-      - zod
-
   '@wagmi/core@1.4.13(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))':
     dependencies:
       '@wagmi/connectors': 3.1.11(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
@@ -16733,13 +16710,6 @@ snapshots:
       - '@types/react'
       - react
 
-  '@walletconnect/modal-core@2.6.2(react@18.3.1)':
-    dependencies:
-      valtio: 1.11.2(@types/react@18.3.3)(react@18.3.1)
-    transitivePeerDependencies:
-      - '@types/react'
-      - react
-
   '@walletconnect/modal-ui@2.6.2(@types/react@18.3.3)(react@18.2.0)':
     dependencies:
       '@walletconnect/modal-core': 2.6.2(@types/react@18.3.3)(react@18.2.0)
@@ -16762,7 +16732,7 @@ snapshots:
 
   '@walletconnect/modal-ui@2.6.2(react@18.3.1)':
     dependencies:
-      '@walletconnect/modal-core': 2.6.2(react@18.3.1)
+      '@walletconnect/modal-core': 2.6.2(@types/react@18.3.3)(react@18.3.1)
       lit: 2.8.0
       motion: 10.16.2
       qrcode: 1.5.3
@@ -16788,7 +16758,7 @@ snapshots:
 
   '@walletconnect/modal@2.6.2(react@18.3.1)':
     dependencies:
-      '@walletconnect/modal-core': 2.6.2(react@18.3.1)
+      '@walletconnect/modal-core': 2.6.2(@types/react@18.3.3)(react@18.3.1)
       '@walletconnect/modal-ui': 2.6.2(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
@@ -18287,13 +18257,13 @@ snapshots:
       - supports-color
       - ts-node
 
-  create-jest@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3)):
+  create-jest@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4)):
     dependencies:
       '@jest/types': 29.6.3
       chalk: 4.1.2
       exit: 0.1.2
       graceful-fs: 4.2.11
-      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4))
       jest-util: 29.7.0
       prompts: 2.4.2
     transitivePeerDependencies:
@@ -20713,16 +20683,16 @@ snapshots:
       - supports-color
       - ts-node
 
-  jest-cli@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3)):
+  jest-cli@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4)):
     dependencies:
-      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4))
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
       chalk: 4.1.2
-      create-jest: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      create-jest: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4))
       exit: 0.1.2
       import-local: 3.2.0
-      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4))
       jest-util: 29.7.0
       jest-validate: 29.7.0
       yargs: 17.7.2
@@ -21793,10 +21763,10 @@ snapshots:
 
   jest@29.6.4(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3)):
     dependencies:
-      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))
       '@jest/types': 29.6.3
       import-local: 3.2.0
-      jest-cli: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      jest-cli: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
