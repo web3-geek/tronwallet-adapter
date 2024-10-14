@@ -1,16 +1,16 @@
 import type { ReactNode } from 'react';
 import { useEffect, useMemo, useState, useCallback } from 'react';
 // import './App.css';
-import { OkxWalletAdapter } from '@tronweb3/tronwallet-adapters';
+import { BybitWalletAdapter } from '@tronweb3/tronwallet-adapters';
 import type { Adapter } from '@tronweb3/tronwallet-abstract-adapter';
 import { AdapterState } from '@tronweb3/tronwallet-abstract-adapter';
 import { Box, Button, Typography, Tooltip, Select, MenuItem, Alert, FormControl, TextField } from '@mui/material';
 import { tronWeb } from './tronweb.js';
 const receiver = 'TMDKznuDWaZwfZHcM61FVFstyYNmK6Njk1';
-const getTronWeb = () =>  window.okxwallet?.tronLink?.tronWeb as any || null;
+const getTronWeb = () =>  window.bybitWallet?.tronLink?.tronWeb as any || null;
 // const getTronWeb = () => tronWeb;
 
-export function OkxWalletAdapterDemo() {
+export function BybitWalletAdapterDemo() {
     const [connectState, setConnectState] = useState(AdapterState.NotFound);
     const [account, setAccount] = useState('');
     const [readyState, setReadyState] = useState('');
@@ -19,7 +19,7 @@ export function OkxWalletAdapterDemo() {
     const [open, setOpen] = useState(false);
     const [signMessage, setSignMessage] = useState('Hello, Adapter');
     const [signedMessage, setSignedMessage] = useState('');
-    const adapter = useMemo(() => new OkxWalletAdapter(), []);
+    const adapter = useMemo(() => new BybitWalletAdapter(), []);
 
     useEffect(() => {
         setConnectState(adapter.state);
@@ -112,7 +112,7 @@ export function OkxWalletAdapterDemo() {
     }
     return (
         <Box sx={{ width: '100%', maxWidth: 900 }}>
-            <h1>OkxWallet Demo</h1>
+            <h1>Bybit Wallet Demo</h1>
             <Typography variant="h6" gutterBottom>
                 Your account address:
             </Typography>
