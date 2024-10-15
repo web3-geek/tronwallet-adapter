@@ -7,7 +7,6 @@ import {
     WalletNotFoundError,
     WalletDisconnectedError,
     WalletSignTransactionError,
-    isInMobileBrowser,
     WalletGetNetworkError,
 } from '@tronweb3/tronwallet-abstract-adapter';
 import type {
@@ -18,7 +17,7 @@ import type {
     Network,
 } from '@tronweb3/tronwallet-abstract-adapter';
 import { getNetworkInfoByTronWeb } from '@tronweb3/tronwallet-adapter-tronlink';
-import type { TronLinkWallet } from '@tronweb3/tronwallet-adapter-tronlink';
+import type { Tron, TronWeb } from '@tronweb3/tronwallet-adapter-tronlink';
 import { openTokenPocket, supportTokenPocket } from './utils.js';
 
 export interface TokenPocketAdapterConfig extends BaseAdapterConfig {
@@ -36,6 +35,21 @@ export interface TokenPocketAdapterConfig extends BaseAdapterConfig {
 
 export const TokenPocketAdapterName = 'TokenPocket' as AdapterName<'TokenPocket'>;
 
+export interface TokenPocketWallet {
+    ready: boolean;
+    tronWeb: TronWeb;
+    tron: Tron;
+}
+
+declare global {
+    interface Window {
+        tokenpocket?: TokenPocketWallet;
+        tronWeb?: TronWeb;
+        // @ts-ignore
+        tron?: Tron;
+    }
+}
+
 export class TokenPocketAdapter extends Adapter {
     name = TokenPocketAdapterName;
     url = 'https://tokenpocket.pro/';
@@ -46,7 +60,7 @@ export class TokenPocketAdapter extends Adapter {
     private _readyState: WalletReadyState = isInBrowser() ? WalletReadyState.Loading : WalletReadyState.NotFound;
     private _state: AdapterState = AdapterState.Loading;
     private _connecting: boolean;
-    private _wallet: TronLinkWallet | null;
+    private _wallet: TokenPocketWallet | null;
     private _address: string | null;
 
     constructor(config: TokenPocketAdapterConfig = {}) {
@@ -64,12 +78,6 @@ export class TokenPocketAdapter extends Adapter {
         this._wallet = null;
         this._address = null;
 
-        if (!isInMobileBrowser()) {
-            // Currently TokenPocket extension does not support Tron.
-            this._readyState = WalletReadyState.NotFound;
-            this._state = AdapterState.NotFound;
-            return;
-        }
         if (supportTokenPocket()) {
             this._readyState = WalletReadyState.Found;
             this._updateWallet();
@@ -131,8 +139,11 @@ export class TokenPocketAdapter extends Adapter {
             }
             if (!this._wallet) return;
             this._connecting = true;
-            const wallet = this._wallet as TronLinkWallet;
-            const address = wallet.tronWeb.defaultAddress?.base58 || '';
+            const wallet = this._wallet as TokenPocketWallet;
+
+            const res = await wallet.tron.request({ method: 'eth_requestAccounts' });
+            const address = res[0];
+
             this.setAddress(address);
             this.setState(AdapterState.Connected);
             this.emit('connect', this.address || '');
@@ -213,7 +224,7 @@ export class TokenPocketAdapter extends Adapter {
         if (!this.connected) throw new WalletDisconnectedError();
         const wallet = this._wallet;
         if (!wallet || !wallet.tronWeb) throw new WalletDisconnectedError();
-        return wallet as TronLinkWallet;
+        return wallet as TokenPocketWallet;
     }
 
     private checkIfOpenApp() {
@@ -286,19 +297,17 @@ export class TokenPocketAdapter extends Adapter {
         let state = this.state;
         let address = this.address;
         if (supportTokenPocket()) {
-            // fake tronLink
             this._wallet = {
+                tron: window.tokenpocket?.tron,
                 ready: window.tronWeb?.ready,
-                tronWeb: window.tronWeb,
-                request: () => Promise.resolve(true) as any,
-            } as TronLinkWallet;
+                tronWeb: window.tokenpocket?.tronWeb,
+            } as TokenPocketWallet;
             address = this._wallet.tronWeb.defaultAddress?.base58 || null;
             state = window.tronWeb?.ready ? AdapterState.Connected : AdapterState.Disconnect;
             if (!window.tronWeb?.ready) {
                 this.checkForWalletReady();
             }
         } else {
-            // no tronlink support
             this._wallet = null;
             address = null;
             state = AdapterState.NotFound;
