@@ -10,7 +10,7 @@ beforeAll(() => {
 describe('when only tronWeb is avaliable', () => {
     let adapter: TronLinkAdapter;
     beforeAll(() => {
-        window.tronWeb = new MockTronWeb('address');
+        window.tronWeb = new MockTronWeb('address') as any;
         adapter = new TronLinkAdapter();
     });
     test('initial state should be fine', () => {
@@ -25,7 +25,7 @@ describe('when only tronWeb is avaliable', () => {
     });
 
     test('signMessage() should work fine', async () => {
-        window.tronWeb!.trx.signMessageV2 = jest.fn(() => Promise.resolve('signedMessage'));
+        window.tronWeb!.trx.signMessageV2 = jest.fn(() => Promise.resolve('signedMessage')) as any;
         const res = await adapter.signMessage('');
         expect(res).toEqual('signedMessage');
     });
@@ -45,8 +45,8 @@ describe('when only tronWeb is avaliable', () => {
 });
 
 test('should work fine when tronWeb is not ready', () => {
-    window.tronWeb = new MockTronWeb('address');
-    window.tronWeb.ready = false;
+    window.tronWeb = new MockTronWeb('address') as any;
+    window.tronWeb!.ready = false;
     const adapter = new TronLinkAdapter();
     jest.advanceTimersByTime(4000);
     expect(adapter.state).toEqual(AdapterState.Disconnect);

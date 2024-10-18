@@ -113,6 +113,7 @@ describe('useWallet', function () {
         });
         signMessage = jest.fn();
         signTransaction = jest.fn();
+        getWallet = jest.fn();
     }
 
     class Adapter1 extends FakeAdapter {

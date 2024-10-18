@@ -155,7 +155,7 @@ const SectionConnect = memo(function SectionConnect({ adapter, readyState }: { a
 
     return (
         <Box>
-            <Button variant="contained" disabled={adapter?.connected || readyState !== WalletReadyState.Found} onClick={onConnect}>
+            <Button variant="contained" onClick={onConnect}>
                 Connect
             </Button>
 

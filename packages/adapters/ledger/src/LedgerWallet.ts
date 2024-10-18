@@ -185,7 +185,7 @@ export class LedgerWallet {
             await this.cleanUp();
         }
     }
-    async signTransaction(transaction: Transaction): Promise<SignedTransaction> {
+    async signTransaction(transaction: Transaction | SignedTransaction): Promise<SignedTransaction> {
         await this.waitForIdle();
         try {
             const index = this.selectedIndex;
@@ -201,12 +201,16 @@ export class LedgerWallet {
                     throw e;
                 }
             }
-            if (Array.isArray(transaction.signature)) {
-                if (!transaction.signature.includes(signedResponse)) transaction.signature.push(signedResponse);
+            let signature = (transaction as SignedTransaction).signature;
+            if (Array.isArray(signature)) {
+                if (!signature.includes(signedResponse)) signature.push(signedResponse);
             } else {
-                transaction.signature = [signedResponse];
+                signature = [signedResponse];
             }
-            return transaction as SignedTransaction;
+            return {
+                ...transaction,
+                signature,
+            } as SignedTransaction;
         } finally {
             await this.cleanUp();
         }

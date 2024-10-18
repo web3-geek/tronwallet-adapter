@@ -10,6 +10,7 @@ export class MockTronLink implements TronLinkWallet {
         this.ready = true;
     }
     get tronWeb() {
+        // @ts-ignore
         return {
             ready: true,
             defaultAddress: {
@@ -42,6 +43,7 @@ export class MockTronLink implements TronLinkWallet {
 
     setReadyState(state: boolean) {
         this.ready = state;
+        // @ts-ignore
         this.tronWeb.ready = state;
     }
 }

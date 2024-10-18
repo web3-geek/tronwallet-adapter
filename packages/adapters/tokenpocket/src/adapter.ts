@@ -15,9 +15,10 @@ import type {
     AdapterName,
     BaseAdapterConfig,
     Network,
+    TronWeb,
 } from '@tronweb3/tronwallet-abstract-adapter';
 import { getNetworkInfoByTronWeb } from '@tronweb3/tronwallet-adapter-tronlink';
-import type { Tron, TronWeb } from '@tronweb3/tronwallet-adapter-tronlink';
+import type { Tron } from '@tronweb3/tronwallet-adapter-tronlink';
 import { openTokenPocket, supportTokenPocket } from './utils.js';
 
 export interface TokenPocketAdapterConfig extends BaseAdapterConfig {
@@ -44,9 +45,6 @@ export interface TokenPocketWallet {
 declare global {
     interface Window {
         tokenpocket?: TokenPocketWallet;
-        tronWeb?: TronWeb;
-        // @ts-ignore
-        tron?: Tron;
     }
 }
 
@@ -182,11 +180,15 @@ export class TokenPocketAdapter extends Adapter {
         }
     }
 
-    async multiSign(...args: any[]): Promise<SignedTransaction> {
+    async multiSign(
+        transaction: Transaction,
+        privateKey?: string | false,
+        permissionId?: number
+    ): Promise<SignedTransaction> {
         try {
             const wallet = await this.checkAndGetWallet();
             try {
-                return await wallet.tronWeb.trx.multiSign(...args);
+                return await wallet.tronWeb.trx.multiSign(transaction, privateKey, permissionId);
             } catch (error: any) {
                 if (error instanceof Error) {
                     throw new WalletSignTransactionError(error.message, error);

@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import type { TronLinkWallet } from '../../src/adapter.js';
-import type { Tron, TronWeb } from '../../src/types.js';
+import type { TronWeb } from '../../src/types.js';
+import type { Tron } from '../../src/types.js';
 
+// @ts-ignore
 export class MockTronWeb implements TronWeb {
-    fullNode = { host: 'http://api.nileex.io' };
-    solidityNode = { host: 'http://api.nileex.io' };
-    eventServer = { host: 'http://api.nileex.io' };
+    fullNode = { host: 'http://api.nileex.io' } as any;
+    solidityNode = { host: 'http://api.nileex.io' } as any;
+    eventServer = { host: 'http://api.nileex.io' } as any;
 
     defaultAddress: {
         base58: string;
@@ -35,12 +37,14 @@ export class MockTronWeb implements TronWeb {
         this.defaultAddress.base58 = address;
     }
 
+    // @ts-ignore
     toHex(_: string): string {
         return '';
     }
 }
 
 export class MockBaseTronLink {
+    // @ts-ignore
     protected _tronWeb: TronWeb = new MockTronWeb('');
     protected locked = true;
 
@@ -112,6 +116,7 @@ export class MockTronLink extends MockBaseTronLink implements TronLinkWallet {
 
     constructor(address?: string) {
         super(address || '');
+        // @ts-ignore
         this._tronWeb = new MockTronWeb(address || '');
         window.addEventListener = this._on as any;
         window.postMessage = this._emit;
@@ -123,6 +128,7 @@ export class MockTronLink extends MockBaseTronLink implements TronLinkWallet {
     _lock() {
         this.ready = false;
         this.locked = true;
+        // @ts-ignore
         this._tronWeb.ready = false;
         window.postMessage(
             {

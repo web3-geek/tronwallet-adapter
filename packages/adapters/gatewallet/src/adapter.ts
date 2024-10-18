@@ -51,7 +51,7 @@ export class GateWalletAdapter extends Adapter {
     name = GateWalletAdapterName;
     url = 'https://gate.io';
     icon =
-        'data:image/svg+xml;base64,PHN2ZyBpZD0i5Zu+5bGCXzEiIGRhdGEtbmFtZT0i5Zu+5bGCIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDcyMCA0MDUiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMjM1NGU2O30uY2xzLTJ7ZmlsbDojMTdlNmExO308L3N0eWxlPjwvZGVmcz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNjAsMjM1LjVhMzMsMzMsMCwwLDEsMC02NnYtMjdhNjAsNjAsMCwxLDAsNjAsNjBIMzkzQTMzLDMzLDAsMCwxLDM2MCwyMzUuNVoiLz48cmVjdCBjbGFzcz0iY2xzLTIiIHg9IjM2MCIgeT0iMTY5LjUiIHdpZHRoPSIzMyIgaGVpZ2h0PSIzMyIvPjwvc3ZnPg==';
+        'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzQ1ODJfNzgxIiBzdHlsZT0ibWFzay10eXBlOmFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiPgo8cGF0aCBkPSJNMCA4QzAgMy41ODE3MiAzLjU4MTcyIDAgOCAwSDMyQzM2LjQxODMgMCA0MCAzLjU4MTcyIDQwIDhWMzJDNDAgMzYuNDE4MyAzNi40MTgzIDQwIDMyIDQwSDhDMy41ODE3MiA0MCAwIDM2LjQxODMgMCAzMlY4WiIgZmlsbD0id2hpdGUiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzQ1ODJfNzgxKSI+CjxwYXRoIGQ9Ik0wIDhDMCAzLjU4MTcyIDMuNTgxNzIgMCA4IDBIMzJDMzYuNDE4MyAwIDQwIDMuNTgxNzIgNDAgOFYzMkM0MCAzNi40MTgzIDM2LjQxODMgNDAgMzIgNDBIOEMzLjU4MTcyIDQwIDAgMzYuNDE4MyAwIDMyVjhaIiBmaWxsPSIjMDA1MUQyIi8+CjwvZz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zNSAyMEMzNSAyOC4yODQzIDI4LjI4NDMgMzUgMjAgMzVDMTEuNzE1NyAzNSA1IDI4LjI4NDMgNSAyMEM1IDExLjcxNTcgMTEuNzE1NyA1IDIwIDVWMTIuMDU4N0MyMCAxMi4wNTg3IDE5Ljk5OTkgMTIuMDU4NyAxOS45OTk5IDEyLjA1ODdDMTUuNjE0MSAxMi4wNTg3IDEyLjA1ODcgMTUuNjE0MSAxMi4wNTg3IDE5Ljk5OTlDMTIuMDU4NyAyNC4zODU3IDE1LjYxNDEgMjcuOTQxMSAxOS45OTk5IDI3Ljk0MTFDMjQuMzg1NiAyNy45NDExIDI3Ljk0MSAyNC4zODU3IDI3Ljk0MTEgMjBIMzVaIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIyMCIgeT0iMTIuMDU4NiIgd2lkdGg9IjcuOTQxMTgiIGhlaWdodD0iNy45NDExOCIgZmlsbD0iIzE0RTBBMSIvPgo8L3N2Zz4K';
 
     config: Required<GateWalletAdapterConfig>;
     private _readyState: WalletReadyState = isInBrowser() ? WalletReadyState.Loading : WalletReadyState.NotFound;
@@ -201,12 +201,16 @@ export class GateWalletAdapter extends Adapter {
         }
     }
 
-    async multiSign(...args: any[]): Promise<SignedTransaction> {
+    async multiSign(
+        transaction: Transaction,
+        privateKey?: string | false,
+        permissionId?: number
+    ): Promise<SignedTransaction> {
         try {
             const wallet = await this.checkAndGetWallet();
 
             try {
-                return await wallet.tronWeb.trx.multiSign(...args);
+                return await wallet.tronWeb.trx.multiSign(transaction, privateKey, permissionId);
             } catch (error: any) {
                 if (error instanceof Error) {
                     throw new WalletSignTransactionError(error.message, error);

@@ -184,11 +184,15 @@ export class BitKeepAdapter extends Adapter {
         }
     }
 
-    async multiSign(...args: any[]): Promise<SignedTransaction> {
+    async multiSign(
+        transaction: Transaction,
+        privateKey?: string | false,
+        permissionId?: number
+    ): Promise<SignedTransaction> {
         try {
             const wallet = await this.checkAndGetWallet();
             try {
-                return await wallet.tronWeb.trx.multiSign(...args);
+                return await wallet.tronWeb.trx.multiSign(transaction, privateKey, permissionId);
             } catch (error: any) {
                 if (error instanceof Error) {
                     throw new WalletSignTransactionError(error.message, error);
@@ -294,14 +298,15 @@ export class BitKeepAdapter extends Adapter {
             throw new WalletNotFoundError();
         }
     }
+
     private _updateWallet = async () => {
         let state = this.state;
         let address = this.address;
         if (supportBitgetWallet()) {
             const adapter = new TronLinkAdapter();
             this._wallet =
-                ((await adapter?.getProvider().tronLink) as TronLinkWallet) ||
-                (window.bitkeep?.tronLink as TronLinkWallet);
+                ((await adapter?.getProvider().tronLink) as unknown as TronLinkWallet) ||
+                (window.bitkeep?.tronLink as unknown as TronLinkWallet);
             address = this._wallet.tronWeb.defaultAddress?.base58 || null;
             state = this._wallet.ready ? AdapterState.Connected : AdapterState.Disconnect;
             if (!this._wallet.ready) {

@@ -461,7 +461,7 @@ describe('methods should work fine', () => {
             const sign: any = jest.fn(() => Promise.resolve('signedTransaction'));
             (tron.tronWeb as TronWeb).trx.multiSign = sign;
 
-            const result = await adapter.multiSign('1', '2', '3');
+            const result = await adapter.multiSign(...(['1', '2', '3'] as [any, any, any]));
             expect(sign).toHaveBeenCalledWith('1', '2', '3');
             expect(result).toBe('signedTransaction');
             expect(onError).not.toHaveBeenCalled();

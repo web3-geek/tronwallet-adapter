@@ -56,7 +56,7 @@ export async function getNetworkInfoByTronWeb(tronWeb: TronWeb) {
 declare global {
     interface Window {
         tronLink?: TronLinkWallet;
-        tronWeb?: TronWeb;
+        tronWeb?: TronWeb & { ready?: boolean };
         // @ts-ignore
         tron?: Tron;
     }
@@ -287,12 +287,16 @@ export class TronLinkAdapter extends Adapter {
         }
     }
 
-    async multiSign(...args: any[]): Promise<SignedTransaction> {
+    async multiSign(
+        transaction: Transaction,
+        privateKey?: string | false,
+        permissionId?: number
+    ): Promise<SignedTransaction> {
         try {
             const wallet = await this.checkAndGetWallet();
 
             try {
-                return await wallet.tronWeb.trx.multiSign(...args);
+                return await wallet.tronWeb.trx.multiSign(transaction, privateKey, permissionId);
             } catch (error: any) {
                 if (error instanceof Error) {
                     throw new WalletSignTransactionError(error.message, error);
