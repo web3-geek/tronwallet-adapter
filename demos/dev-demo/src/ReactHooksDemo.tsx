@@ -8,8 +8,8 @@ import { Detail } from './TronLinkAdapterDemo.js';
 function ReactHooksDemoWrap({ children }: any) {
     const adapters = useMemo(() => {
         return [
-            new TronLinkAdapter(),
-            new LedgerAdapter(),
+            // new TronLinkAdapter(),
+            // new LedgerAdapter(),
             new WalletConnectAdapter({
                 network: 'Nile',
                 options: {
@@ -27,29 +27,32 @@ function ReactHooksDemoWrap({ children }: any) {
         ];
     }, []);
     function onConnect(address: string) {
-        console.log('xxxx onConnect: ', address)
+        console.log('xxxx onConnect: ', address);
     }
     function onAccountsChanged(cur: string, pre?: string) {
         console.log('xxxx onAccountsChanged, cur: ', cur, ' pre:', pre);
     }
     function onAdapterChanged(adapter: Adapter | null) {
         console.log('xxxx onAdapterChanged: ', adapter?.name);
+        return 'ss';
     }
     function onDisconnect() {
-        console.log('xxxx onDisconnect')
+        console.log('xxxx onDisconnect');
     }
     return (
-        <WalletProvider autoConnect={true} disableAutoConnectOnLoad={true} adapters={adapters}
+        <WalletProvider
+            autoConnect={true}
+            disableAutoConnectOnLoad={true}
+            adapters={adapters}
             onConnect={onConnect}
             onAccountsChanged={onAccountsChanged}
             onAdapterChanged={onAdapterChanged}
             onDisconnect={onDisconnect}
-            onError={console.log}>
-            <WalletModalProvider>
-                {children}
-            </WalletModalProvider>
+            onError={console.log}
+        >
+            <WalletModalProvider>{children}</WalletModalProvider>
         </WalletProvider>
-    )
+    );
 }
 function _ReactHooksDemo() {
     const { wallets, address, wallet, connected, select, connect, signMessage, disconnect } = useWallet();
@@ -100,13 +103,13 @@ function _ReactHooksDemo() {
                 <span style={{ color: connected ? '#08f108' : 'orange' }}>{String(connected)}</span>
             </Typography>
             <Typography variant="h6" gutterBottom>
-                <TextField label="Message to sign" size="small" value={messageToSign} onChange={(e) => setMessageToSign(e.target.value)}></TextField>
+                <TextField label="Message to sign" size="small" value={messageToSign} onChange={(e) => setMessageToSign(e.target.value)} />
             </Typography>
             <Detail>
                 <Button variant="contained" disabled={wallet?.adapter?.connected} onClick={() => connect()}>
                     Connect
                 </Button>
-                
+
                 <Button variant="contained" disabled={!wallet?.adapter?.connected} onClick={() => disconnect()}>
                     Disconnect
                 </Button>
@@ -115,7 +118,7 @@ function _ReactHooksDemo() {
                 <Button variant="contained" onClick={onSignMessage}>
                     Sign Message
                 </Button>
-                
+
                 <Button variant="contained" disabled={!signedMessage} onClick={onVerifyMessage}>
                     Verify Signed Message
                 </Button>
@@ -149,7 +152,9 @@ function _ReactHooksDemo() {
 }
 
 export function ReactHooksDemo() {
-    return <ReactHooksDemoWrap>
-        <_ReactHooksDemo></_ReactHooksDemo>
-    </ReactHooksDemoWrap>
+    return (
+        <ReactHooksDemoWrap>
+            <_ReactHooksDemo />
+        </ReactHooksDemoWrap>
+    );
 }

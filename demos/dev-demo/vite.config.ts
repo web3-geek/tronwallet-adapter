@@ -6,16 +6,17 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
-        react(),
-        legacy({
-            targets: ['IE 11'],
-        }),
         nodePolyfills({
             // include: ['crypto', 'buffer', 'stream'],
             globals: {
                 Buffer: true,
-            }
-        })
+            },
+        }),
+        react(),
+        legacy({
+            targets: ['IE 11'],
+        }),
+        
     ],
     resolve: {
         alias: {
@@ -29,5 +30,8 @@ export default defineConfig({
     },
     build: {
         minify: false,
+        rollupOptions: {
+            // external: ['buffer']
+        }
     },
 });

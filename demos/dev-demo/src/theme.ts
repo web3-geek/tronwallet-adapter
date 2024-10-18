@@ -17,12 +17,12 @@ const theme = createTheme({
     components: {
         MuiButton: {
             styleOverrides: {
-               root: {
-                margin: '0 10px'
-               } 
-            }
-        }
-    }
+                root: {
+                    margin: '0 10px',
+                },
+            },
+        },
+    },
 });
 
 export default theme;
