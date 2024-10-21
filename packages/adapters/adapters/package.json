@@ -49,7 +49,8 @@
         "@tronweb3/tronwallet-adapter-tokenpocket": "workspace:^",
         "@tronweb3/tronwallet-adapter-tronlink": "workspace:^",
         "@tronweb3/tronwallet-adapter-walletconnect": "workspace:^",
-        "@tronweb3/tronwallet-adapter-gatewallet": "workspace:^"
+        "@tronweb3/tronwallet-adapter-gatewallet": "workspace:^",
+        "@tronweb3/tronwallet-adapter-foxwallet": "workspace:^"
     },
     "devDependencies": {
         "@vitest/browser": "^2.0.4",

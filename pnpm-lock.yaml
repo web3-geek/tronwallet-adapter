@@ -519,6 +519,9 @@ importers:
       '@tronweb3/tronwallet-abstract-adapter':
         specifier: ^1.1.0
         version: 1.1.6
+      '@tronweb3/tronwallet-adapter-foxwallet':
+        specifier: ^1.0.0
+        version: link:../../../packages/adapters/foxwallet
       '@tronweb3/tronwallet-adapter-ledger':
         specifier: ^1.1.1
         version: 1.1.8
@@ -670,6 +673,9 @@ importers:
       '@tronweb3/tronwallet-adapter-bitkeep':
         specifier: workspace:^
         version: link:../bitkeep
+      '@tronweb3/tronwallet-adapter-foxwallet':
+        specifier: workspace:^
+        version: link:../foxwallet
       '@tronweb3/tronwallet-adapter-gatewallet':
         specifier: workspace:^
         version: link:../gatewallet
@@ -712,6 +718,28 @@ importers:
         version: 2.0.4(@types/node@20.14.12)(@vitest/browser@2.0.4)(jsdom@23.2.0(bufferutil@4.0.8)(utf-8-validate@6.0.3))(terser@5.31.3)
 
   packages/adapters/bitkeep:
+    dependencies:
+      '@bitget-wallet/web3-sdk':
+        specifier: 0.0.8
+        version: 0.0.8(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@tronweb3/tronwallet-abstract-adapter':
+        specifier: workspace:^
+        version: link:../abstract-adapter
+      '@tronweb3/tronwallet-adapter-tronlink':
+        specifier: workspace:^
+        version: link:../tronlink
+    devDependencies:
+      '@testing-library/dom':
+        specifier: ^8.20.0
+        version: 8.20.1
+      jest-environment-jsdom:
+        specifier: ^29.3.1
+        version: 29.7.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      shx:
+        specifier: ^0.3.4
+        version: 0.3.4
+
+  packages/adapters/foxwallet:
     dependencies:
       '@bitget-wallet/web3-sdk':
         specifier: 0.0.8
@@ -12470,7 +12498,7 @@ snapshots:
       '@types/node': 20.5.1
       chalk: 4.1.2
       cosmiconfig: 8.3.6(typescript@4.9.3)
-      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.9.3))(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))(typescript@4.9.3)
+      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.9.3))(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))(typescript@4.9.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -13240,7 +13268,7 @@ snapshots:
       - supports-color
       - ts-node
 
-  '@jest/core@29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))':
+  '@jest/core@29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.14.12)(typescript@5.5.4))':
     dependencies:
       '@jest/console': 29.7.0
       '@jest/reporters': 29.7.0
@@ -13254,7 +13282,7 @@ snapshots:
       exit: 0.1.2
       graceful-fs: 4.2.11
       jest-changed-files: 29.7.0
-      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.14.12)(typescript@5.5.4))
       jest-haste-map: 29.7.0
       jest-message-util: 29.7.0
       jest-regex-util: 29.6.3
@@ -18186,7 +18214,7 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.9.3))(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))(typescript@4.9.3):
+  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.9.3))(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))(typescript@4.9.3):
     dependencies:
       '@types/node': 20.5.1
       cosmiconfig: 8.3.6(typescript@4.9.3)
@@ -18257,13 +18285,13 @@ snapshots:
       - supports-color
       - ts-node
 
-  create-jest@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3)):
+  create-jest@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4)):
     dependencies:
       '@jest/types': 29.6.3
       chalk: 4.1.2
       exit: 0.1.2
       graceful-fs: 4.2.11
-      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4))
       jest-util: 29.7.0
       prompts: 2.4.2
     transitivePeerDependencies:
@@ -20688,16 +20716,16 @@ snapshots:
       - supports-color
       - ts-node
 
-  jest-cli@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3)):
+  jest-cli@29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4)):
     dependencies:
-      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4))
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
       chalk: 4.1.2
-      create-jest: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      create-jest: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4))
       exit: 0.1.2
       import-local: 3.2.0
-      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      jest-config: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@5.5.4))
       jest-util: 29.7.0
       jest-validate: 29.7.0
       yargs: 17.7.2
@@ -21768,10 +21796,10 @@ snapshots:
 
   jest@29.6.4(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3)):
     dependencies:
-      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))
       '@jest/types': 29.6.3
       import-local: 3.2.0
-      jest-cli: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@20.5.1)(typescript@4.9.3))
+      jest-cli: 29.7.0(@types/node@18.19.42)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@18.19.42)(typescript@4.9.3))
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros

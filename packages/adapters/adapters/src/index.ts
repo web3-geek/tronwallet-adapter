@@ -6,3 +6,4 @@ export * from '@tronweb3/tronwallet-adapter-bitkeep';
 export * from '@tronweb3/tronwallet-adapter-okxwallet';
 export * from '@tronweb3/tronwallet-adapter-gatewallet';
 export * from '@tronweb3/tronwallet-adapter-imtoken';
+export * from '@tronweb3/tronwallet-adapter-foxwallet';
