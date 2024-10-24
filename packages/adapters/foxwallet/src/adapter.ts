@@ -12,11 +12,7 @@ import {
     WalletConnectionError,
 } from '@tronweb3/tronwallet-abstract-adapter';
 import { getNetworkInfoByTronWeb } from '@tronweb3/tronwallet-adapter-tronlink';
-import type {
-    AccountsChangedEventData,
-    TronLinkMessageEvent,
-    TronLinkWallet,
-} from '@tronweb3/tronwallet-adapter-tronlink';
+import type { TronLinkWallet } from '@tronweb3/tronwallet-adapter-tronlink';
 import type {
     Transaction,
     SignedTransaction,
