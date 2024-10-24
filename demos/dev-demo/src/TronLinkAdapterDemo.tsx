@@ -48,7 +48,7 @@ export function TronLinkAdapterDemo() {
             setReadyState(adapter.readyState);
         });
         adapter.on('connect', async () => {
-            console.log('connect2222: ', adapter.address);
+            console.log('connect: ', adapter.address);
             setAccount(adapter.address || '');
             adapter
                 .network()

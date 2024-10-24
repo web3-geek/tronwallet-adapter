@@ -4,18 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BitkeepAdapter Test Demo</title>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/tronweb@5.3.2/dist/TronWeb.min.js"></script> -->
-        <script>
-            window.onload = function() {
-                var script = document.createElement('script');
-                script.type = "text/javascript";
-                script.src = 'https://cdn.jsdelivr.net/npm/tronweb@5.3.2/dist/TronWeb.min.js';
-                script.onload = function() {
-                    console.log('loaded: window.TronWeb: ', window.TronWeb)
-                };
-                document.getElementsByTagName("head")[0].appendChild(script);
-            }
-        </script>
         <script src="../node_modules/@tronweb3/tronwallet-adapter-bitkeep/lib/umd/index.js"></script>
     </head>
     <body>
@@ -42,7 +30,7 @@
                 log('readyState: ', adapter.readyState);
             });
             adapter.on('connect', () => {
-                log('connect2222: ', adapter.address);
+                log('connect: ', adapter.address);
                 address = adapter.address;
                 adapter
                     .network()

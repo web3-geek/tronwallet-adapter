@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { AdapterState, WalletSwitchChainError } from '@tronweb3/tronwallet-abstract-adapter';
 import { TronLinkAdapter } from '../../src/adapter.js';
 import { MockTronWeb } from './mock.js';
@@ -10,7 +11,7 @@ beforeAll(() => {
 describe('when only tronWeb is avaliable', () => {
     let adapter: TronLinkAdapter;
     beforeAll(() => {
-        window.tronWeb = new MockTronWeb('address') as any;
+        window.tronWeb = new MockTronWeb('address');
         adapter = new TronLinkAdapter();
     });
     test('initial state should be fine', () => {
@@ -25,13 +26,13 @@ describe('when only tronWeb is avaliable', () => {
     });
 
     test('signMessage() should work fine', async () => {
-        window.tronWeb!.trx.signMessageV2 = jest.fn(() => Promise.resolve('signedMessage')) as any;
+        window.tronWeb!.trx.signMessageV2 = jest.fn(() => Promise.resolve('signedMessage'));
         const res = await adapter.signMessage('');
         expect(res).toEqual('signedMessage');
     });
     test('signTransaction() should work fine', async () => {
-        window.tronWeb!.trx.sign = jest.fn(() => Promise.resolve('signTransaction')) as any;
-        const res = await adapter.signTransaction({} as any);
+        window.tronWeb!.trx.sign = jest.fn(() => Promise.resolve('signTransaction'));
+        const res = await adapter.signTransaction({});
         expect(res).toEqual('signTransaction');
     });
     test('switchChain() should throw error', () => {
@@ -45,7 +46,7 @@ describe('when only tronWeb is avaliable', () => {
 });
 
 test('should work fine when tronWeb is not ready', () => {
-    window.tronWeb = new MockTronWeb('address') as any;
+    window.tronWeb = new MockTronWeb('address');
     window.tronWeb!.ready = false;
     const adapter = new TronLinkAdapter();
     jest.advanceTimersByTime(4000);

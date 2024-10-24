@@ -45,7 +45,7 @@ adapter.on('readyStateChanged', () => {
   log('readyState: ', adapter.readyState);
 });
 adapter.on('connect', () => {
-  log('connect2222: ', adapter.address);
+  log('connect: ', adapter.address);
   address = adapter.address;
   adapter
       .network()
