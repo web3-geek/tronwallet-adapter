@@ -12,6 +12,7 @@ import {
     TokenPocketAdapter,
     TronLinkAdapter,
     WalletConnectAdapter,
+    FoxWalletAdapter
 } from '@tronweb3/tronwallet-adapters';
 import { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import { tronWeb } from './tronweb';
@@ -27,6 +28,7 @@ export const AdapterBasicTest = memo(function AdapterBasicTest() {
             new BitKeepAdapter(),
             new GateWalletAdapter(),
             new ImTokenAdapter(),
+            new FoxWalletAdapter(),
             new LedgerAdapter(),
             new WalletConnectAdapter(walletconnectConfig),
         ],
