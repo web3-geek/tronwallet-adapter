@@ -518,28 +518,25 @@ importers:
         specifier: 1.7.1
         version: 1.7.1
       '@tronweb3/tronwallet-abstract-adapter':
-        specifier: ^1.1.0
-        version: 1.1.6
-      '@tronweb3/tronwallet-adapter-foxwallet':
-        specifier: ^1.0.0
-        version: link:../../../packages/adapters/foxwallet
+        specifier: latest
+        version: link:../../../packages/adapters/abstract-adapter
       '@tronweb3/tronwallet-adapter-ledger':
-        specifier: ^1.1.1
-        version: 1.1.8
+        specifier: latest
+        version: link:../../../packages/adapters/ledger
       '@tronweb3/tronwallet-adapter-react-hooks':
-        specifier: ^1.0.0
-        version: 1.1.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: latest
+        version: link:../../../packages/react/react-hooks
       '@tronweb3/tronwallet-adapter-react-ui':
-        specifier: ^1.1.0
-        version: 1.1.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: latest
+        version: link:../../../packages/react/react-ui
       '@tronweb3/tronwallet-adapter-tronlink':
-        specifier: ^1.1.9
-        version: 1.1.9
+        specifier: latest
+        version: link:../../../packages/adapters/tronlink
       '@tronweb3/tronwallet-adapter-walletconnect':
-        specifier: ^2.0.0
-        version: 2.0.0(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@4.9.3)(utf-8-validate@6.0.3)
+        specifier: latest
+        version: link:../../../packages/adapters/walletconnect
       '@tronweb3/tronwallet-adapters':
-        specifier: ^1.2.4
+        specifier: latest
         version: link:../../../packages/adapters/adapters
       buffer:
         specifier: ^6.0.3
