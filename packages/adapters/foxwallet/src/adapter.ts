@@ -169,7 +169,6 @@ export class FoxWalletAdapter extends Adapter {
             const address = wallet.tronWeb.defaultAddress?.base58 || '';
             this.setAddress(address);
             this.setState(AdapterState.Connected);
-            this._listenEvent();
             this.emit('connect', this.address || '');
         } catch (error: any) {
             this.emit('error', error);
@@ -180,7 +179,6 @@ export class FoxWalletAdapter extends Adapter {
     }
 
     async disconnect(): Promise<void> {
-        this._stopListenEvent();
         if (this.state !== AdapterState.Connected) {
             return;
         }
@@ -207,11 +205,15 @@ export class FoxWalletAdapter extends Adapter {
         }
     }
 
-    async multiSign(...args: any[]): Promise<SignedTransaction> {
+    async multiSign(
+        transaction: Transaction,
+        privateKey?: string | false,
+        permissionId?: number
+    ): Promise<SignedTransaction> {
         try {
             const wallet = await this.checkAndGetWallet();
             try {
-                return await wallet.tronWeb.trx.multiSign(...args);
+                return await wallet.tronWeb.trx.multiSign(transaction, privateKey, permissionId);
             } catch (error: any) {
                 if (error instanceof Error) {
                     throw new WalletSignTransactionError(error.message, error);
@@ -251,59 +253,6 @@ export class FoxWalletAdapter extends Adapter {
         if (!wallet || !wallet.tronWeb) throw new WalletDisconnectedError();
         return wallet as TronLinkWallet;
     }
-
-    private _listenEvent() {
-        this._stopListenEvent();
-        window.addEventListener('message', this.messageHandler);
-    }
-
-    private _stopListenEvent() {
-        window.removeEventListener('message', this.messageHandler);
-    }
-
-    private messageHandler = (e: TronLinkMessageEvent) => {
-        const message = e.data?.message;
-        if (!message) {
-            return;
-        }
-        if (message.action === 'accountsChanged') {
-            setTimeout(() => {
-                const preAddr = this.address || '';
-                if ((this._wallet as TronLinkWallet)?.ready) {
-                    const address = (message.data as AccountsChangedEventData).address;
-                    this.setAddress(address);
-                    this.setState(AdapterState.Connected);
-                } else {
-                    this.setAddress(null);
-                    this.setState(AdapterState.Disconnect);
-                }
-                const address = this.address || '';
-                if (address !== preAddr) {
-                    this.emit('accountsChanged', this.address || '', preAddr);
-                }
-                if (!preAddr && this.address) {
-                    this.emit('connect', this.address);
-                } else if (preAddr && !this.address) {
-                    this.emit('disconnect');
-                }
-            }, 200);
-        } else if (message.action === 'connect') {
-            const isCurConnected = this.connected;
-            const preAddress = this.address || '';
-            const address = (this._wallet as TronLinkWallet).tronWeb?.defaultAddress?.base58 || '';
-            this.setAddress(address);
-            this.setState(AdapterState.Connected);
-            if (!isCurConnected) {
-                this.emit('connect', address);
-            } else if (address !== preAddress) {
-                this.emit('accountsChanged', this.address || '', preAddress);
-            }
-        } else if (message.action === 'disconnect') {
-            this.setAddress(null);
-            this.setState(AdapterState.Disconnect);
-            this.emit('disconnect');
-        }
-    };
 
     private checkReadyInterval: ReturnType<typeof setInterval> | null = null;
     private checkForWalletReady() {
@@ -377,7 +326,6 @@ export class FoxWalletAdapter extends Adapter {
         if (supportFoxWallet()) {
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             this._wallet = window.foxwallet!.tronLink;
-            this._listenEvent();
             address = this._wallet.tronWeb?.defaultAddress?.base58 || null;
             state = address ? AdapterState.Connected : AdapterState.Disconnect;
         } else {
