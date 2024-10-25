@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { AdapterState, WalletSwitchChainError } from '@tronweb3/tronwallet-abstract-adapter';
 import { TronLinkAdapter } from '../../src/adapter.js';
 import { MockTronWeb } from './mock.js';
@@ -30,8 +31,8 @@ describe('when only tronWeb is avaliable', () => {
         expect(res).toEqual('signedMessage');
     });
     test('signTransaction() should work fine', async () => {
-        window.tronWeb!.trx.sign = jest.fn(() => Promise.resolve('signTransaction')) as any;
-        const res = await adapter.signTransaction({} as any);
+        window.tronWeb!.trx.sign = jest.fn(() => Promise.resolve('signTransaction'));
+        const res = await adapter.signTransaction({});
         expect(res).toEqual('signTransaction');
     });
     test('switchChain() should throw error', () => {
@@ -46,7 +47,7 @@ describe('when only tronWeb is avaliable', () => {
 
 test('should work fine when tronWeb is not ready', () => {
     window.tronWeb = new MockTronWeb('address');
-    window.tronWeb.ready = false;
+    window.tronWeb!.ready = false;
     const adapter = new TronLinkAdapter();
     jest.advanceTimersByTime(4000);
     expect(adapter.state).toEqual(AdapterState.Disconnect);

@@ -5,6 +5,7 @@
         "node": true
     },
     "rules": {
+        "react/self-closing-comp": "error",
         "require-extensions/require-extensions": "off"
     },
     "overrides": [

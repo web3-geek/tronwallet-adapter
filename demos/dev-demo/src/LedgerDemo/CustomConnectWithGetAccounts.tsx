@@ -52,11 +52,11 @@ export function CustomConnectWithGetAccounts() {
             Please confirm your address on ledger is same as <strong>{selectedAccount?.address}</strong>
         </div>
     );
-    const SuccessSection = <ConnectedSection adapter={adapter}></ConnectedSection>;
+    const SuccessSection = <ConnectedSection adapter={adapter} />;
 
     const sectionMap: Record<number, ReactNode> = {
-        0: <ConnectTip></ConnectTip>,
-        1: <SelectAccountSection accounts={accounts} onCancel={onCancel} onConfirm={onConfirm} getAccounts={adapter.ledgerUtils.getAccounts}></SelectAccountSection>,
+        0: <ConnectTip />,
+        1: <SelectAccountSection accounts={accounts} onCancel={onCancel} onConfirm={onConfirm} getAccounts={adapter.ledgerUtils.getAccounts} />,
         2: VerifyAddressSection,
         3: SuccessSection,
     };

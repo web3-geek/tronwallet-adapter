@@ -14,7 +14,7 @@ const vConsole = new VConsole();
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <ThemeProvider theme={theme}>
-            <AppWraper></AppWraper>
+            <AppWraper />
         </ThemeProvider>
     </React.StrictMode>
 );

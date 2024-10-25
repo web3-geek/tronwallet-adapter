@@ -182,6 +182,7 @@ tronwallet-adapter
 |   |   ├─okxwallet # adapter for Okx Wallet
 |   |   ├─imtoken # adapter for imToken Wallet
 |   |   ├─gatewallet # adapter for gate.io Wallet
+|   |   ├─foxwallet # adapter for FoxWallet
 |   ├─react
 |   |   ├─react-hooks # react hooks to manage wallet state
 |   |   ├─react-ui # react ui components to select/connect wallets
@@ -215,6 +216,7 @@ You can use the `@tronweb3/tronwallet-adapters` package, or add the individual w
 | [okxwallet](https://www.okx.com/)           | Adapter for Okx Wallet extension and App(Android)                | [`@tronweb3/tronwallet-adapter-okxwallet`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-okxwallet)         |
 | [imtoken](https://token.im/)                | Adapter for imToken Wallet App(IOS and Android)                  | [`@tronweb3/tronwallet-adapter-imtoken`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-imtoken)             |
 | [gatewallet](https://www.gate.io/web3)                | Adapter for gate.io Wallet App(IOS and Android)                  | [`@tronweb3/tronwallet-adapter-gatewallet`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-gatewallet)             |
+| [foxwallet](https://foxwallet.com/)                | Adapter for Fox Wallet App(IOS and Android)                  | [`@tronweb3/tronwallet-adapter-foxwallet`](https://www.npmjs.com/package/@tronweb3/tronwallet-adapter-foxwallet)             |
 
 ### React Components
 
@@ -239,6 +241,7 @@ This package contains all wallet adapters for Tron including:
 -   [Okx Wallet](https://okx.com).
 -   [imToken Wallet](https://token.im/).
 -   [gate.io Wallet](https://www.gate.io/web3) 
+-   [Fox Wallet](https://foxwallet.com/) 
 
 Code example：
 

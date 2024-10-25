@@ -1,36 +1,12 @@
-import type { NetworkNodeConfig, SignedTransaction, Transaction } from '@tronweb3/tronwallet-abstract-adapter';
+import type { NetworkNodeConfig } from '@tronweb3/tronwallet-abstract-adapter';
+import { TronWeb } from '@tronweb3/tronwallet-abstract-adapter';
 
 export interface TronLinkWalletEvents {
     connect(...args: unknown[]): unknown;
     disconnect(...args: unknown[]): unknown;
 }
 
-type Provider = {
-    host: string;
-};
-
-export interface TronWeb {
-    ready: boolean;
-    toHex(m: string): string;
-    fullNode: Provider;
-    solidityNode: Provider;
-    eventServer: Provider;
-    trx: {
-        sign(transaction: Transaction, privateKey?: string): Promise<SignedTransaction>;
-        sign(message: string, privateKey?: string): Promise<string>;
-        multiSign(...args: any[]): Promise<any>;
-        signMessageV2(message: string, privateKey?: string): Promise<string>;
-        getBlockByNumber(index: number): Promise<{ blockID: string }>;
-        // signMessageV2(...args: unknown[]): Promise<string>;
-    };
-    defaultAddress?: {
-        base58: string;
-        hex: string;
-        name: string;
-        type: number;
-    };
-}
-
+export { TronWeb };
 export interface ReqestAccountsResponse {
     code: 200 | 4000 | 4001;
     message: string;

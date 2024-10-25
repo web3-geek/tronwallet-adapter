@@ -11,4 +11,5 @@ test("window['@tronweb3/tronwallet-adapters'] should exist", () => {
     expect(Adapters.WalletConnectAdapter).not.toBeUndefined();
     expect(Adapters.ImTokenAdapter).not.toBeUndefined();
     expect(Adapters.OkxWalletAdapter).not.toBeUndefined();
+    expect(Adapters.FoxWalletAdapter).not.toBeUndefined();
 });

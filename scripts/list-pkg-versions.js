@@ -9,9 +9,14 @@ const EVM_PKGS = [
     '@tronweb3/tronwallet-adapter-metamask',
     '@tronweb3/tronwallet-adapter-tronlink-evm',
 ];
-const DIRS = [path.resolve(__dirname, '../packages/adapters'), path.resolve(__dirname, '../packages/react')];
+const DIRS = [
+    path.resolve(__dirname, '../packages/adapters'),
+    path.resolve(__dirname, '../packages/react'),
+    path.resolve(__dirname, '../packages/vue'),
+];
 const pkgVersions = [];
 const pkgsToBeReleased = [];
+const pkgsNotChanged = [];
 DIRS.forEach((dir) => {
     const subDirs = fs.readdirSync(dir).filter((pkg) => !pkg.startsWith('.'));
     subDirs.forEach((pkg) => {
@@ -30,20 +35,25 @@ DIRS.forEach((dir) => {
 pkgVersions.forEach(({ name, version }) => {
     try {
         const oldVersion = execSync(`npm view ${name} version`, { stdio: 'pipe' }).toString().trim();
-        console.log(`${name}: ${oldVersion} -> ${version}`);
         if (oldVersion !== version) {
-            pkgsToBeReleased.push({ name, version });
+            pkgsToBeReleased.push({ name, version, oldVersion });
+        } else {
+            pkgsNotChanged.push({ name, version });
         }
     } catch (e) {
         if (e.toString().includes('E404')) {
-            console.log(`${name}: 0.0.0 -> ${version}`);
-            pkgsToBeReleased.push({ name, version });
+            pkgsToBeReleased.push({ name, version, oldVersion: '0.0.0' });
         }
         // ignore
     }
 });
 console.log('\nPackages to be released: ');
-pkgsToBeReleased.forEach(({ name, version }) => {
+pkgsToBeReleased.forEach(({ name, version, oldVersion }) => {
+    console.log(`${name}: ${oldVersion} -> ${version}`);
+});
+
+console.log('\nPackages not changed: ');
+pkgsNotChanged.forEach(({ name, version }) => {
     console.log(`${name}: ${version}`);
 });
 

@@ -11,6 +11,7 @@ export default {
         ],
     },
     moduleNameMapper: {
+        'bignumber\\.js': '$0',
         '(.+)\\.js': '$1',
     },
     globals: {

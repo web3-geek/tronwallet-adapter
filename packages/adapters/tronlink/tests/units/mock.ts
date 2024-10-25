@@ -1,7 +1,9 @@
+// @ts-nocheck
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import type { TronLinkWallet } from '../../src/adapter.js';
-import type { Tron, TronWeb } from '../../src/types.js';
+import type { TronWeb } from '../../src/types.js';
+import type { Tron } from '../../src/types.js';
 
 export class MockTronWeb implements TronWeb {
     fullNode = { host: 'http://api.nileex.io' };
@@ -30,7 +32,7 @@ export class MockTronWeb implements TronWeb {
                 blockID: '0000000a93d9e9372efcd8690dc',
             });
         },
-    } as any;
+    };
     constructor(address: string) {
         this.defaultAddress.base58 = address;
     }
@@ -102,7 +104,7 @@ export class MockTron extends MockBaseTronLink implements Tron {
         }
     }
     _destroy() {
-        this.listeners = null as any;
+        this.listeners = null;
         window.tron = undefined;
     }
 }
@@ -113,7 +115,7 @@ export class MockTronLink extends MockBaseTronLink implements TronLinkWallet {
     constructor(address?: string) {
         super(address || '');
         this._tronWeb = new MockTronWeb(address || '');
-        window.addEventListener = this._on as any;
+        window.addEventListener = this._on;
         window.postMessage = this._emit;
     }
 
