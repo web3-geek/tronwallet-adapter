@@ -1,6 +1,6 @@
 # `@tronweb3/tronwallet-adapter-okxwallet`
 
-This package provides an adapter to enable TRON DApps to connect to the [Okx Wallet extension](https://www.okx.com/download) and [Okx Wallet App](https://www.okx.com/download).
+This package provides an adapter to enable TRON DApps to connect to the [Okx Wallet extension](https://chromewebstore.google.com/detail/okx-wallet/mcohilncbfahbmgdjkbpemcciiolgcge) and [Okx Wallet App](https://www.okx.com/download).
 
 ## Demo
 
@@ -8,7 +8,7 @@ This package provides an adapter to enable TRON DApps to connect to the [Okx Wal
 import { OkxWalletAdapter } from '@tronweb3/tronwallet-adapter-okxwallet';
 
 const adapter = new OkxWalletAdapter();
-// connect to TokenPocket
+// connect to OkxWallet
 await adapter.connect();
 
 // then you can get address
@@ -80,6 +80,5 @@ interface OkxWalletAdapterConfig {
 -   OkxWallet Extension only support these: `accountsChanged`,`connect`,`disconnect`.
 -   OkxWallet App does not support any events.
 -   Deeplink only works for OKX App **version 6.1.38 or later** on Android.
--   **OKX Wallet App on IOS does not support TRON currently**.
 
 For more information about tronwallet adapters, please refer to [`@tronweb3/tronwallet-adapters`](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/adapters)
