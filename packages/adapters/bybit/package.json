@@ -43,8 +43,8 @@
         "build:umd": "node ../../../scripts/build-umd.js"
     },
     "dependencies": {
-        "@tronweb3/tronwallet-abstract-adapter": "^1.1.0",
-        "@tronweb3/tronwallet-adapter-tronlink": "^1.1.9"
+        "@tronweb3/tronwallet-abstract-adapter": "workspace:^",
+        "@tronweb3/tronwallet-adapter-tronlink": "workspace:^"
     },
     "devDependencies": {
         "@testing-library/dom": "^8.20.0",
