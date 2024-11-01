@@ -163,7 +163,7 @@ const SectionConnect = memo(function SectionConnect({ adapter, readyState }: { a
                 Connect
             </Button>
 
-            <Button variant="contained" disabled={!adapter?.connected} onClick={() => adapter?.disconnect()}>
+            <Button variant="contained" onClick={() => adapter?.disconnect()}>
                 Disconnect
             </Button>
         </Box>
