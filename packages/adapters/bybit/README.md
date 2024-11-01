@@ -1,21 +1,21 @@
-# `@tronweb3/tronwallet-adapter-okxwallet`
+# `@tronweb3/tronwallet-adapter-bybit`
 
-This package provides an adapter to enable TRON DApps to connect to the [Okx Wallet extension](https://chromewebstore.google.com/detail/okx-wallet/mcohilncbfahbmgdjkbpemcciiolgcge) and [Okx Wallet App](https://www.okx.com/download).
+This package provides an adapter to enable TRON DApps to connect to the [Bybit Wallet extension](https://chromewebstore.google.com/detail/bybit-wallet/pdliaogehgdbhbnmkklieghmmjkpigpa) and [Bybit Wallet App](https://www.bybit.com/en/web3/home).
 
 ## Demo
 
 ```typescript
-import { OkxWalletAdapter } from '@tronweb3/tronwallet-adapter-okxwallet';
+import { BybitWalletAdapter } from '@tronweb3/tronwallet-adapter-bybit';
 
-const adapter = new OkxWalletAdapter();
-// connect to OkxWallet
+const adapter = new BybitWalletAdapter();
+// connect to Bybit
 await adapter.connect();
 
 // then you can get address
 console.log(adapter.address);
 
 // create a send TRX transaction
-const unSignedTransaction = await window.okxwallet.tronLink.tronWeb.transactionBuilder.sendTrx(
+const unSignedTransaction = await window.bybitWallet.tronLink.tronWeb.transactionBuilder.sendTrx(
     targetAddress,
     100,
     adapter.address
@@ -23,17 +23,17 @@ const unSignedTransaction = await window.okxwallet.tronLink.tronWeb.transactionB
 // using adapter to sign the transaction
 const signedTransaction = await adapter.signTransaction(unSignedTransaction);
 // broadcast the transaction
-await window.okxwallet.tronLink.tronWeb.trx.sendRawTransaction(signedTransaction);
+await window.bybitWallet.tronLink.tronWeb.trx.sendRawTransaction(signedTransaction);
 ```
 
 ## Documentation
 
 ### API
 
--   `Constructor(config: OkxWalletAdapterConfig)`
+-   `Constructor(config: BybitWalletAdapterConfig)`
 
 ```typescript
-interface OkxWalletAdapterConfig {
+interface BybitWalletAdapterConfig {
     /**
      * Set if open Wallet's website when wallet is not installed.
      * Default is true.
@@ -76,9 +76,11 @@ interface OkxWalletAdapterConfig {
 
 ### Caveats
 
--   OkxWallet App and Extension doesn't implement `signMessage()`, `multiSign()` and `switchChain()`.
--   OkxWallet Extension only support these: `accountsChanged`,`connect`,`disconnect`.
--   OkxWallet App does not support any events.
--   Deeplink only works for OKX App **version 6.1.38 or later** on Android.
+-   Bybit Wallet App and Extension doesn't implement `multiSign()` and `switchChain()`.
+-   Bybit Wallet Extension only support these: `accountsChanged`,`connect`,`disconnect`.
+-   Bybit Wallet App does not support any events.
+-   Currently deeplink can only open the app but not dapp browser.
+-   Keyless Wallet doesn't support Dapp connection.
+-   Currently deeplink can not open App Store when app is not installed. 
 
 For more information about tronwallet adapters, please refer to [`@tronweb3/tronwallet-adapters`](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/adapters)

@@ -29,6 +29,9 @@
             "path": "../foxwallet/tsconfig.all.json"
         },
         {
+            "path": "../bybit/tsconfig.all.json"
+        },
+        {
             "path": "./tsconfig.cjs.json"
         },
         {

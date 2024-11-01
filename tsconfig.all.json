@@ -44,6 +44,9 @@
             "path": "./packages/adapters/foxwallet/tsconfig.all.json"
         },
         {
+            "path": "./packages/adapters/bybit/tsconfig.all.json"
+        },
+        {
             "path": "./packages/react/react-hooks/tsconfig.all.json"
         },
         {

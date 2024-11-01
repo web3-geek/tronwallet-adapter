@@ -518,28 +518,25 @@ importers:
         specifier: 1.7.1
         version: 1.7.1
       '@tronweb3/tronwallet-abstract-adapter':
-        specifier: ^1.1.0
-        version: 1.1.6
-      '@tronweb3/tronwallet-adapter-foxwallet':
-        specifier: ^1.0.0
-        version: link:../../../packages/adapters/foxwallet
+        specifier: latest
+        version: link:../../../packages/adapters/abstract-adapter
       '@tronweb3/tronwallet-adapter-ledger':
-        specifier: ^1.1.1
-        version: 1.1.8
+        specifier: latest
+        version: link:../../../packages/adapters/ledger
       '@tronweb3/tronwallet-adapter-react-hooks':
-        specifier: ^1.0.0
-        version: 1.1.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: latest
+        version: link:../../../packages/react/react-hooks
       '@tronweb3/tronwallet-adapter-react-ui':
-        specifier: ^1.1.0
-        version: 1.1.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: latest
+        version: link:../../../packages/react/react-ui
       '@tronweb3/tronwallet-adapter-tronlink':
-        specifier: ^1.1.9
-        version: 1.1.9
+        specifier: latest
+        version: link:../../../packages/adapters/tronlink
       '@tronweb3/tronwallet-adapter-walletconnect':
-        specifier: ^2.0.0
-        version: 2.0.0(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@4.9.3)(utf-8-validate@6.0.3)
+        specifier: latest
+        version: link:../../../packages/adapters/walletconnect
       '@tronweb3/tronwallet-adapters':
-        specifier: ^1.2.4
+        specifier: latest
         version: link:../../../packages/adapters/adapters
       buffer:
         specifier: ^6.0.3
@@ -594,23 +591,23 @@ importers:
         specifier: ^1.7.1
         version: 1.7.1
       '@tronweb3/tronwallet-abstract-adapter':
-        specifier: ^1.1.6
-        version: 1.1.6
+        specifier: latest
+        version: link:../../../packages/adapters/abstract-adapter
       '@tronweb3/tronwallet-adapter-tronlink':
-        specifier: ^1.1.9
-        version: 1.1.9
+        specifier: latest
+        version: link:../../../packages/adapters/tronlink
       '@tronweb3/tronwallet-adapter-vue-hooks':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: latest
+        version: link:../../../packages/vue/vue-hooks
       '@tronweb3/tronwallet-adapter-vue-ui':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: latest
+        version: link:../../../packages/vue/vue-ui
       '@tronweb3/tronwallet-adapter-walletconnect':
-        specifier: ^2.0.0
-        version: 2.0.0(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)
+        specifier: latest
+        version: link:../../../packages/adapters/walletconnect
       '@tronweb3/tronwallet-adapters':
-        specifier: ^1.2.2
-        version: 1.2.2(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)
+        specifier: latest
+        version: link:../../../packages/adapters/adapters
       element-plus:
         specifier: ^2.4.3
         version: 2.7.7(vue@3.4.34(typescript@5.5.4))
@@ -674,6 +671,9 @@ importers:
       '@tronweb3/tronwallet-adapter-bitkeep':
         specifier: workspace:^
         version: link:../bitkeep
+      '@tronweb3/tronwallet-adapter-bybit':
+        specifier: workspace:^
+        version: link:../bybit
       '@tronweb3/tronwallet-adapter-foxwallet':
         specifier: workspace:^
         version: link:../foxwallet
@@ -736,6 +736,25 @@ importers:
       jest-environment-jsdom:
         specifier: ^29.3.1
         version: 29.7.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      shx:
+        specifier: ^0.3.4
+        version: 0.3.4
+
+  packages/adapters/bybit:
+    dependencies:
+      '@tronweb3/tronwallet-abstract-adapter':
+        specifier: ^1.1.0
+        version: link:../abstract-adapter
+      '@tronweb3/tronwallet-adapter-tronlink':
+        specifier: ^1.1.9
+        version: link:../tronlink
+    devDependencies:
+      '@testing-library/dom':
+        specifier: ^8.20.0
+        version: 8.20.1
+      jest-environment-jsdom:
+        specifier: ^29.3.1
+        version: 29.7.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       shx:
         specifier: ^0.3.4
         version: 0.3.4
@@ -3547,14 +3566,6 @@ packages:
 
   '@tronweb3/tronwallet-adapter-tronlink@1.1.9':
     resolution: {integrity: sha512-fIDKt822OmESLVeYCG9XbXGI34lM/79/jzJ3rd81xOZD8y7V0/DuDLdg5gFiCH4g9OIutKslDXiwoMpQry9O3w==}
-    engines: {node: '>=16', pnpm: '>=7'}
-
-  '@tronweb3/tronwallet-adapter-vue-hooks@1.0.0':
-    resolution: {integrity: sha512-Wi7JOAGdjImM1zdd/sZ7Z5ms23jHMHM1da4Hu+yAfSDM9eHim1gnrwhhPv3IWDbI8FsVXK+4dTQQBqV+8bJ/+g==}
-    engines: {node: '>=16', pnpm: '>=7'}
-
-  '@tronweb3/tronwallet-adapter-vue-ui@1.0.0':
-    resolution: {integrity: sha512-zgDZqsD8E7xz9nUcsROPWTPgt2v+M9/JNAN/8zGn/TDLxDoPANZ3EVjKyhK6a00jPB8ytGFwK3aJtFEbrgXPLg==}
     engines: {node: '>=16', pnpm: '>=7'}
 
   '@tronweb3/tronwallet-adapter-walletconnect@1.0.6':
@@ -14825,16 +14836,6 @@ snapshots:
     dependencies:
       '@tronweb3/tronwallet-abstract-adapter': 1.1.6
 
-  '@tronweb3/tronwallet-adapter-vue-hooks@1.0.0':
-    dependencies:
-      '@tronweb3/tronwallet-abstract-adapter': 1.1.6
-      '@tronweb3/tronwallet-adapter-tronlink': 1.1.9
-
-  '@tronweb3/tronwallet-adapter-vue-ui@1.0.0':
-    dependencies:
-      '@tronweb3/tronwallet-abstract-adapter': 1.1.6
-      '@tronweb3/tronwallet-adapter-vue-hooks': 1.0.0
-
   '@tronweb3/tronwallet-adapter-walletconnect@1.0.6(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)':
     dependencies:
       '@tronweb3/tronwallet-abstract-adapter': 1.1.6
@@ -14967,39 +14968,6 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@tronweb3/tronwallet-adapter-walletconnect@2.0.0(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)':
-    dependencies:
-      '@tronweb3/tronwallet-abstract-adapter': 1.1.6
-      '@tronweb3/walletconnect-tron': 3.0.0(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)
-      '@wagmi/core': 1.4.13(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
-      '@walletconnect/sign-client': 2.14.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
-      '@walletconnect/types': 2.14.0
-      viem: 0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3)
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - encoding
-      - immer
-      - ioredis
-      - react
-      - supports-color
-      - typescript
-      - uWebSockets.js
-      - utf-8-validate
-      - zod
-
   '@tronweb3/tronwallet-adapters@1.2.2(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.2.0)(typescript@4.9.3)(utf-8-validate@6.0.3)':
     dependencies:
       '@tronweb3/tronwallet-adapter-bitkeep': 1.1.1(bufferutil@4.0.8)(utf-8-validate@6.0.3)
@@ -15099,39 +15067,6 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@tronweb3/tronwallet-adapters@1.2.2(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)':
-    dependencies:
-      '@tronweb3/tronwallet-adapter-bitkeep': 1.1.1(bufferutil@4.0.8)(utf-8-validate@6.0.3)
-      '@tronweb3/tronwallet-adapter-ledger': 1.1.8
-      '@tronweb3/tronwallet-adapter-okxwallet': 1.0.3
-      '@tronweb3/tronwallet-adapter-tokenpocket': 1.0.3
-      '@tronweb3/tronwallet-adapter-tronlink': 1.1.9
-      '@tronweb3/tronwallet-adapter-walletconnect': 2.0.0(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - encoding
-      - immer
-      - ioredis
-      - react
-      - supports-color
-      - typescript
-      - uWebSockets.js
-      - utf-8-validate
-      - zod
-
   '@tronweb3/walletconnect-tron@2.0.0(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)':
     dependencies:
       '@walletconnect/sign-client': 2.14.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
@@ -15186,32 +15121,6 @@ snapshots:
   '@tronweb3/walletconnect-tron@3.0.0(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)':
     dependencies:
       '@walletconnect/modal': 2.6.2(@types/react@18.3.3)(react@18.3.1)
-      '@walletconnect/sign-client': 2.14.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
-      '@walletconnect/utils': 2.14.0
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - encoding
-      - ioredis
-      - react
-      - uWebSockets.js
-      - utf-8-validate
-
-  '@tronweb3/walletconnect-tron@3.0.0(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)':
-    dependencies:
-      '@walletconnect/modal': 2.6.2(react@18.3.1)
       '@walletconnect/sign-client': 2.14.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       '@walletconnect/utils': 2.14.0
     transitivePeerDependencies:
@@ -16187,43 +16096,6 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@wagmi/connectors@3.1.11(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))':
-    dependencies:
-      '@coinbase/wallet-sdk': 3.9.3
-      '@safe-global/safe-apps-provider': 0.18.3(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3)
-      '@safe-global/safe-apps-sdk': 8.1.0(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3)
-      '@walletconnect/ethereum-provider': 2.11.0(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)
-      '@walletconnect/legacy-provider': 2.0.0
-      '@walletconnect/modal': 2.6.2(react@18.3.1)
-      '@walletconnect/utils': 2.11.0
-      abitype: 0.8.7(typescript@5.5.4)
-      eventemitter3: 4.0.7
-      viem: 0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3)
-    optionalDependencies:
-      typescript: 5.5.4
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - encoding
-      - ioredis
-      - react
-      - supports-color
-      - uWebSockets.js
-      - utf-8-validate
-      - zod
-
   '@wagmi/core@1.4.13(@types/react@18.3.3)(bufferutil@4.0.8)(immer@9.0.21)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))':
     dependencies:
       '@wagmi/connectors': 3.1.11(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
@@ -16326,39 +16198,6 @@ snapshots:
   '@wagmi/core@1.4.13(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))':
     dependencies:
       '@wagmi/connectors': 3.1.11(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
-      abitype: 0.8.7(typescript@5.5.4)
-      eventemitter3: 4.0.7
-      viem: 0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3)
-      zustand: 4.5.4(@types/react@18.3.3)(immer@9.0.21)(react@18.3.1)
-    optionalDependencies:
-      typescript: 5.5.4
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - encoding
-      - immer
-      - ioredis
-      - react
-      - supports-color
-      - uWebSockets.js
-      - utf-8-validate
-      - zod
-
-  '@wagmi/core@1.4.13(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))':
-    dependencies:
-      '@wagmi/connectors': 3.1.11(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@6.0.3)(viem@0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3))
       abitype: 0.8.7(typescript@5.5.4)
       eventemitter3: 4.0.7
       viem: 0.3.50(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.3)
@@ -16550,39 +16389,6 @@ snapshots:
       - uWebSockets.js
       - utf-8-validate
 
-  '@walletconnect/ethereum-provider@2.11.0(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.3)':
-    dependencies:
-      '@walletconnect/jsonrpc-http-connection': 1.0.8
-      '@walletconnect/jsonrpc-provider': 1.0.14
-      '@walletconnect/jsonrpc-types': 1.0.4
-      '@walletconnect/jsonrpc-utils': 1.0.8
-      '@walletconnect/modal': 2.6.2(react@18.3.1)
-      '@walletconnect/sign-client': 2.11.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
-      '@walletconnect/types': 2.11.0
-      '@walletconnect/universal-provider': 2.11.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
-      '@walletconnect/utils': 2.11.0
-      events: 3.3.0
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - encoding
-      - ioredis
-      - react
-      - uWebSockets.js
-      - utf-8-validate
-
   '@walletconnect/events@1.0.1':
     dependencies:
       keyvaluestorage-interface: 1.0.0
@@ -16733,13 +16539,6 @@ snapshots:
       - '@types/react'
       - react
 
-  '@walletconnect/modal-core@2.6.2(react@18.3.1)':
-    dependencies:
-      valtio: 1.11.2(@types/react@18.3.3)(react@18.3.1)
-    transitivePeerDependencies:
-      - '@types/react'
-      - react
-
   '@walletconnect/modal-ui@2.6.2(@types/react@18.3.3)(react@18.2.0)':
     dependencies:
       '@walletconnect/modal-core': 2.6.2(@types/react@18.3.3)(react@18.2.0)
@@ -16760,16 +16559,6 @@ snapshots:
       - '@types/react'
       - react
 
-  '@walletconnect/modal-ui@2.6.2(react@18.3.1)':
-    dependencies:
-      '@walletconnect/modal-core': 2.6.2(react@18.3.1)
-      lit: 2.8.0
-      motion: 10.16.2
-      qrcode: 1.5.3
-    transitivePeerDependencies:
-      - '@types/react'
-      - react
-
   '@walletconnect/modal@2.6.2(@types/react@18.3.3)(react@18.2.0)':
     dependencies:
       '@walletconnect/modal-core': 2.6.2(@types/react@18.3.3)(react@18.2.0)
@@ -16782,14 +16571,6 @@ snapshots:
     dependencies:
       '@walletconnect/modal-core': 2.6.2(@types/react@18.3.3)(react@18.3.1)
       '@walletconnect/modal-ui': 2.6.2(@types/react@18.3.3)(react@18.3.1)
-    transitivePeerDependencies:
-      - '@types/react'
-      - react
-
-  '@walletconnect/modal@2.6.2(react@18.3.1)':
-    dependencies:
-      '@walletconnect/modal-core': 2.6.2(react@18.3.1)
-      '@walletconnect/modal-ui': 2.6.2(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - react

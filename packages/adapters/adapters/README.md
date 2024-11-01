@@ -18,6 +18,7 @@ As `@tronweb3/tronwallet-adapters` exports adapter of each wallet , you can use 
 | [`@tronweb3/tronwallet-adapter-imtoken`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-imtoken)               | adapter for [imToken](https://token.im/)           | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/imtoken)        |
 | [`@tronweb3/tronwallet-adapter-gatewallet`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-gatewallet)               | adapter for [gate.io](https://www.gate.io/web3)           | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/gatewallet)        |
 | [`@tronweb3/tronwallet-adapter-foxwallet`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-foxwallet)               | adapter for [FoxWallet](https://foxwallet.com/)           | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/foxwallet)        |
+| [`@tronweb3/tronwallet-adapter-bybit`](https://npmjs.com/package/@tronweb3/tronwallet-adapter-bybit)               | adapter for [Bybit Wallet](https://www.bybit.com/en/web3/home)           | [View](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/bybit)        |
 
 
 ## Usage
@@ -341,3 +342,4 @@ Other adapters `Constructor` config api can be found in their source code `READM
 -   [ImTokenAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/imtoken)
 -   [GateWalletAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/gatewallet)
 -   [FoxWalletAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/foxwallet)
+-   [BybitWalletAdapter](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/bybit)
