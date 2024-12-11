@@ -1,7 +1,7 @@
 import type { NetworkNodeConfig } from '@tronweb3/tronwallet-abstract-adapter';
 import { TronWeb } from '@tronweb3/tronwallet-abstract-adapter';
 
-export interface TronLinkWalletEvents {
+export interface TronLinkEvents {
     connect(...args: unknown[]): unknown;
     disconnect(...args: unknown[]): unknown;
 }

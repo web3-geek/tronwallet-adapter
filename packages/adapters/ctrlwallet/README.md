@@ -88,4 +88,4 @@ await tronWeb.trx.sendRawTransaction(signedTransaction);
 
 -   **Ctrl Wallet doesn't support `disconnect` by DApp**. As CtrlWalletAdapter doesn't support disconnect by DApp website, call `adapter.disconnect()` won't disconnect from Ctrl Wallet extension really.
 
-For more information about tronwallet adapters, please refer to [`@web3-geek/tronwallet-adapters`](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/adapters)
+For more information about tronwallet adapters, please refer to [`@tronweb3/tronwallet-adapters`](https://github.com/web3-geek/tronwallet-adapter/tree/main/packages/adapters/adapters)
