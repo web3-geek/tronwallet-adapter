@@ -34,6 +34,7 @@ This repository contains wallet adapters and components for Tron DApps. With out
 |  |Browser Extension | >= 3.16.3 |
 | [Ledger](https://www.ledger.com/) | - | All versions |
 | [WalletConnect](https://walletconnect.org) | - | >= v2.0 |
+| [CtrlWallet](https://ctrl.xyz//) | - | >= 1.0.0 |
 
 > **Note**: In case wallet developers intend to release breaking changes, you can [open an issue here](https://github.com/web3-geek/tronwallet-adapter/issues/new) to inform us, thus enabling us to update the new protocols accordingly.
 
